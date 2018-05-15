@@ -1,0 +1,349 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:2:1-60:12
+	package
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:4:5-42
+		INJECTED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml
+uses-permission#com.streamstech.droid.mshtb.gcm.permission.C2D_MESSAGE
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:6:5-94
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:6:22-91
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:7:5-82
+MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\1a2845df054f3075f638837dbf507837828481a4\output\AndroidManifest.xml:21:5-82
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:7:22-79
+uses-permission#android.permission.CAMERA
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:8:5-65
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:8:22-62
+uses-permission#android.permission.INTERNET
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:9:5-67
+MERGED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b5a548af90acc66b8c5da85753f8e4c54c440efd\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\cba431ff5e8af1d8a81f7721b5c866ee1933dec2\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\c665562c9b7448763f56353876c9ce549be08ef0\output\AndroidManifest.xml:19:5-67
+MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\1a2845df054f3075f638837dbf507837828481a4\output\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4049f1f6b023be54c04b63df622c20db1d4f58f4\output\AndroidManifest.xml:21:5-66
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:9:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:10:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:11:22-78
+uses-feature#android.hardware.camera
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:13:5-60
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:13:19-57
+application
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:15:5-58:19
+MERGED from [com.android.support:design:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\c8ffd5b51ac3af448001c858b240584e3f9ec9a4\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\f8557b190fb8266240cdec79e51e833837ba8e73\output\AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4375ebe0794b58abd6db9a62114665130b0ff293\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b5a548af90acc66b8c5da85753f8e4c54c440efd\output\AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.android.gms:play-services-analytics:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\cba431ff5e8af1d8a81f7721b5c866ee1933dec2\output\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\81be923a6a89fd9e5b6873de7b7cdf0377f7bcae\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\c665562c9b7448763f56353876c9ce549be08ef0\output\AndroidManifest.xml:20:5-30:19
+MERGED from [com.google.android.gms:play-services-appstate:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\acd3d5215486def77b24b86b0140a352cb700337\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4b14f4d47fd7d06ee46cccf6abb023c475b07ee0\output\AndroidManifest.xml:20:5-32:19
+MERGED from [com.google.android.gms:play-services-cast:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\9db0214e3f5b71c191f27af6893af6dbf5b05d72\output\AndroidManifest.xml:19:5-20
+MERGED from [com.android.support:mediarouter-v7:23.0.0] C:\Users\AKASH-LAPTOP\.android\build-cache\83db60c4135f9553195739d490c59f907a4529a1\output\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-fitness:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\843efedde421b48733d388f6487b60092f336058\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-games:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\edee48400e28fbcebca9a6eab8230420572240d2\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-drive:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ccf3849e1c72255aaf764f38d8cfceb9b393ee23\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\1a2845df054f3075f638837dbf507837828481a4\output\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.gms:play-services-location:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\a3c57972a2c49636f07dcd3029eac6c8c5e25b84\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:26:5-46:19
+MERGED from [com.google.android.gms:play-services-nearby:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b036bbf55cbdf78715c83d19a37dbd72fffdf68e\output\AndroidManifest.xml:20:5-20
+MERGED from [com.google.android.gms:play-services-panorama:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\0280e51a5ddb56aac49eda09a7953965d5fdf76c\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-plus:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\fa54f3cab2d58751d2ed454bc4303284686ec3e5\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\a8f1c77a7f230e176048d63be34f50f03d9d537d\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-vision:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\258a0ebd566aa7dd31e532556dcecf657f003fd5\output\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-identity:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\bb68bb993cb630aa3360a36e13df405421809374\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4049f1f6b023be54c04b63df622c20db1d4f58f4\output\AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\a826bb783cc0f255e070e59504b936a7ca0dfc2b\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\3b9f55477033aa3d5801f1794a77f33b6cec67ac\output\AndroidManifest.xml:20:5-24:19
+MERGED from [cn.pedant.sweetalert:library:1.3] C:\Users\AKASH-LAPTOP\.android\build-cache\2480ab47cefae42cd2accb98dcb0fb488b4847cb\output\AndroidManifest.xml:11:5-20
+MERGED from [com.pnikosis:materialish-progress:1.0] C:\Users\AKASH-LAPTOP\.android\build-cache\8fde6d15a65281e0774e571ce966093d773cd058\output\AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\cf3c3102875f3d52320782f27fbc4b24cbdf293d\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\bb515a11281ee4d9161a1ede255e999b6fd18e7c\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\27a7c8286db10f17b4854985a13ae514e332b198\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\0fde2523cd9a5470bce8cb977807792da2313e59\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\8cae3497cbc7e6f39cbcbf9e90e1fadb83dc2e10\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\8face45a5b777c5529837626b45475aaa8a838f7\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\ca0fb805a2ce5c4ef13c7e8400e781dc7714880e\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\b89302adb9c07faae3b0a822051a156c2966265f\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\0377d8aad4f699c1e7f19766c7b8123d0ac447b6\output\AndroidManifest.xml:29:5-20
+MERGED from [com.github.Gavras:MultiLineRadioGroup:v1.0.0.6] C:\Users\AKASH-LAPTOP\.android\build-cache\9c0048476e4e186d2c31bf45bd0110f899f2fec8\output\AndroidManifest.xml:12:5-20
+	android:label
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:19:9-41
+	android:supportsRtl
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:21:9-35
+	android:roundIcon
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:20:9-43
+	android:allowBackup
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:17:9-35
+	android:icon
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:18:9-38
+		REJECTED from [com.pnikosis:materialish-progress:1.0] C:\Users\AKASH-LAPTOP\.android\build-cache\8fde6d15a65281e0774e571ce966093d773cd058\output\AndroidManifest.xml:13:9-45
+	android:theme
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:22:9-40
+	tools:replace
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:23:9-37
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:16:9-46
+activity#com.streamstech.droid.mshtb.activity.SplashActivity
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:24:9-33:20
+	android:screenOrientation
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:27:13-49
+	android:label
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:26:13-45
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:25:13-52
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:28:13-32:29
+action#android.intent.action.MAIN
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:29:17-69
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:29:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:31:17-77
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:31:27-74
+activity#com.streamstech.droid.mshtb.activity.Registration
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:34:9-38:55
+	android:screenOrientation
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:37:13-49
+	android:label
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:36:13-64
+	android:windowSoftInputMode
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:38:13-52
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:35:13-50
+activity#com.streamstech.droid.mshtb.activity.Verification
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:39:9-43:55
+	android:screenOrientation
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:42:13-49
+	android:label
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:41:13-64
+	android:windowSoftInputMode
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:43:13-52
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:40:13-50
+activity#com.streamstech.droid.mshtb.activity.PushDialogActivity
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:44:9-46:52
+	android:screenOrientation
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:46:13-49
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:45:13-56
+activity#com.streamstech.droid.mshtb.activity.NewMainActivity
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:47:9-55:20
+	android:screenOrientation
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:50:13-49
+	android:label
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:49:13-56
+	android:theme
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:51:13-56
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:48:13-53
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:52:13-54:88
+	android:value
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:54:17-85
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:53:17-63
+activity#com.streamstech.droid.mshtb.activity.ScreeningActivity
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:56:9-64
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:56:19-61
+activity#com.streamstech.droid.mshtb.activity.TestIndicationActivity
+ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:57:9-78
+	android:name
+		ADDED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml:57:19-66
+uses-sdk
+INJECTED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\AKASH-LAPTOP\.android\build-cache\24e503d5a8700447196df74baeba5c1bc51c2cd8\output\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:design:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\c8ffd5b51ac3af448001c858b240584e3f9ec9a4\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\69c1fa843a4052eb09ef090558bc80aec6b80cf1\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\f8557b190fb8266240cdec79e51e833837ba8e73\output\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4375ebe0794b58abd6db9a62114665130b0ff293\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b5a548af90acc66b8c5da85753f8e4c54c440efd\output\AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-analytics:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\cba431ff5e8af1d8a81f7721b5c866ee1933dec2\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-appindexing:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\81be923a6a89fd9e5b6873de7b7cdf0377f7bcae\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\c665562c9b7448763f56353876c9ce549be08ef0\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-appstate:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\acd3d5215486def77b24b86b0140a352cb700337\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4b14f4d47fd7d06ee46cccf6abb023c475b07ee0\output\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-cast:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\9db0214e3f5b71c191f27af6893af6dbf5b05d72\output\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:mediarouter-v7:23.0.0] C:\Users\AKASH-LAPTOP\.android\build-cache\83db60c4135f9553195739d490c59f907a4529a1\output\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-fitness:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\843efedde421b48733d388f6487b60092f336058\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-games:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\edee48400e28fbcebca9a6eab8230420572240d2\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-drive:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ccf3849e1c72255aaf764f38d8cfceb9b393ee23\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\1a2845df054f3075f638837dbf507837828481a4\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-location:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\a3c57972a2c49636f07dcd3029eac6c8c5e25b84\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-nearby:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b036bbf55cbdf78715c83d19a37dbd72fffdf68e\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-panorama:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\0280e51a5ddb56aac49eda09a7953965d5fdf76c\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-plus:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\fa54f3cab2d58751d2ed454bc4303284686ec3e5\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-safetynet:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\a8f1c77a7f230e176048d63be34f50f03d9d537d\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-vision:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\258a0ebd566aa7dd31e532556dcecf657f003fd5\output\AndroidManifest.xml:4:5-42
+MERGED from [com.google.android.gms:play-services-wallet:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\6ee7fd0a6d52514a54717935305e8e65d932e37d\output\AndroidManifest.xml:19:5-42
+MERGED from [com.google.android.gms:play-services-identity:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\bb68bb993cb630aa3360a36e13df405421809374\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4049f1f6b023be54c04b63df622c20db1d4f58f4\output\AndroidManifest.xml:26:5-42
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\a826bb783cc0f255e070e59504b936a7ca0dfc2b\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\2601054c72c1519d43cca8a551c0bdbfc732aeb6\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\3b9f55477033aa3d5801f1794a77f33b6cec67ac\output\AndroidManifest.xml:18:5-42
+MERGED from [cn.pedant.sweetalert:library:1.3] C:\Users\AKASH-LAPTOP\.android\build-cache\2480ab47cefae42cd2accb98dcb0fb488b4847cb\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.pnikosis:materialish-progress:1.0] C:\Users\AKASH-LAPTOP\.android\build-cache\8fde6d15a65281e0774e571ce966093d773cd058\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\cf3c3102875f3d52320782f27fbc4b24cbdf293d\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\bb515a11281ee4d9161a1ede255e999b6fd18e7c\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\27a7c8286db10f17b4854985a13ae514e332b198\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\0fde2523cd9a5470bce8cb977807792da2313e59\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\8cae3497cbc7e6f39cbcbf9e90e1fadb83dc2e10\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\8face45a5b777c5529837626b45475aaa8a838f7\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\ca0fb805a2ce5c4ef13c7e8400e781dc7714880e\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\b89302adb9c07faae3b0a822051a156c2966265f\output\AndroidManifest.xml:20:5-43
+MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\AKASH-LAPTOP\.android\build-cache\46741c305f540bdf0ca81a8714ae1c2175f40588\output\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\0377d8aad4f699c1e7f19766c7b8123d0ac447b6\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.github.Gavras:MultiLineRadioGroup:v1.0.0.6] C:\Users\AKASH-LAPTOP\.android\build-cache\9c0048476e4e186d2c31bf45bd0110f899f2fec8\output\AndroidManifest.xml:8:5-10:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\c8ffd5b51ac3af448001c858b240584e3f9ec9a4\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Workspaceas\MSH - TB\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\c8ffd5b51ac3af448001c858b240584e3f9ec9a4\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\69c1fa843a4052eb09ef090558bc80aec6b80cf1\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\f8557b190fb8266240cdec79e51e833837ba8e73\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\cf3c3102875f3d52320782f27fbc4b24cbdf293d\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\bb515a11281ee4d9161a1ede255e999b6fd18e7c\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\27a7c8286db10f17b4854985a13ae514e332b198\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\0fde2523cd9a5470bce8cb977807792da2313e59\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\8cae3497cbc7e6f39cbcbf9e90e1fadb83dc2e10\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\8face45a5b777c5529837626b45475aaa8a838f7\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\ca0fb805a2ce5c4ef13c7e8400e781dc7714880e\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\b89302adb9c07faae3b0a822051a156c2966265f\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\0377d8aad4f699c1e7f19766c7b8123d0ac447b6\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\c8ffd5b51ac3af448001c858b240584e3f9ec9a4\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] C:\Users\AKASH-LAPTOP\.android\build-cache\c8ffd5b51ac3af448001c858b240584e3f9ec9a4\output\AndroidManifest.xml:26:9-47
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b5a548af90acc66b8c5da85753f8e4c54c440efd\output\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\cba431ff5e8af1d8a81f7721b5c866ee1933dec2\output\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-nearby:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b036bbf55cbdf78715c83d19a37dbd72fffdf68e\output\AndroidManifest.xml:19:5-79
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4049f1f6b023be54c04b63df622c20db1d4f58f4\output\AndroidManifest.xml:20:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b5a548af90acc66b8c5da85753f8e4c54c440efd\output\AndroidManifest.xml:21:22-76
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b5a548af90acc66b8c5da85753f8e4c54c440efd\output\AndroidManifest.xml:26:9-29:64
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b5a548af90acc66b8c5da85753f8e4c54c440efd\output\AndroidManifest.xml:28:13-122
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b5a548af90acc66b8c5da85753f8e4c54c440efd\output\AndroidManifest.xml:29:13-61
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b5a548af90acc66b8c5da85753f8e4c54c440efd\output\AndroidManifest.xml:27:13-65
+activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
+ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b5a548af90acc66b8c5da85753f8e4c54c440efd\output\AndroidManifest.xml:30:9-31:52
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b5a548af90acc66b8c5da85753f8e4c54c440efd\output\AndroidManifest.xml:31:13-50
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\b5a548af90acc66b8c5da85753f8e4c54c440efd\output\AndroidManifest.xml:30:19-91
+activity#com.google.android.gms.appinvite.PreviewActivity
+ADDED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\c665562c9b7448763f56353876c9ce549be08ef0\output\AndroidManifest.xml:21:9-29:20
+	android:exported
+		ADDED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\c665562c9b7448763f56353876c9ce549be08ef0\output\AndroidManifest.xml:23:17-40
+	android:theme
+		ADDED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\c665562c9b7448763f56353876c9ce549be08ef0\output\AndroidManifest.xml:24:17-63
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\c665562c9b7448763f56353876c9ce549be08ef0\output\AndroidManifest.xml:22:17-48
+intent-filter#android.intent.category.DEFAULT+com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\c665562c9b7448763f56353876c9ce549be08ef0\output\AndroidManifest.xml:25:13-28:29
+action#com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\c665562c9b7448763f56353876c9ce549be08ef0\output\AndroidManifest.xml:26:17-89
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\c665562c9b7448763f56353876c9ce549be08ef0\output\AndroidManifest.xml:26:25-87
+category#android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\c665562c9b7448763f56353876c9ce549be08ef0\output\AndroidManifest.xml:27:17-75
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\c665562c9b7448763f56353876c9ce549be08ef0\output\AndroidManifest.xml:27:27-73
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4b14f4d47fd7d06ee46cccf6abb023c475b07ee0\output\AndroidManifest.xml:21:9-24:46
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4b14f4d47fd7d06ee46cccf6abb023c475b07ee0\output\AndroidManifest.xml:23:19-52
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4b14f4d47fd7d06ee46cccf6abb023c475b07ee0\output\AndroidManifest.xml:24:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4b14f4d47fd7d06ee46cccf6abb023c475b07ee0\output\AndroidManifest.xml:22:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4b14f4d47fd7d06ee46cccf6abb023c475b07ee0\output\AndroidManifest.xml:21:19-72
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4b14f4d47fd7d06ee46cccf6abb023c475b07ee0\output\AndroidManifest.xml:28:9-31:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4b14f4d47fd7d06ee46cccf6abb023c475b07ee0\output\AndroidManifest.xml:30:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4b14f4d47fd7d06ee46cccf6abb023c475b07ee0\output\AndroidManifest.xml:31:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4b14f4d47fd7d06ee46cccf6abb023c475b07ee0\output\AndroidManifest.xml:29:13-62
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:24:22-65
+provider#com.google.android.gms.measurement.AppMeasurementContentProvider
+ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:28:7-31:37
+	android:authorities
+		ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:29:11-76
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:31:11-35
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:30:11-90
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:33:7-39:18
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:35:11-33
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:34:11-83
+intent-filter#com.google.android.gms.measurement.UPLOAD
+ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:36:9-38:25
+action#com.google.android.gms.measurement.UPLOAD
+ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:37:11-77
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:37:19-75
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:41:7-44:37
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:43:11-33
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:44:11-35
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\ba658ad3146801f6fc9ed8792b1f95c02dc177d8\output\AndroidManifest.xml:42:11-82
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4049f1f6b023be54c04b63df622c20db1d4f58f4\output\AndroidManifest.xml:22:5-24:33
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4049f1f6b023be54c04b63df622c20db1d4f58f4\output\AndroidManifest.xml:23:8-40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\4049f1f6b023be54c04b63df622c20db1d4f58f4\output\AndroidManifest.xml:24:8-31
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\3b9f55477033aa3d5801f1794a77f33b6cec67ac\output\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\3b9f55477033aa3d5801f1794a77f33b6cec67ac\output\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\AKASH-LAPTOP\.android\build-cache\3b9f55477033aa3d5801f1794a77f33b6cec67ac\output\AndroidManifest.xml:22:13-58

@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Challenge TB</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_first_name">First name</string>
+    <string name="prompt_last_name">Last name</string>
+    <string name="prompt_phone">Your phone no</string>
+    <string name="prompt_username">Your user name</string>
+    <string name="prompt_password">Your password</string>
+    <string name="prompt_otp">Code sent via SMS</string>
+    <string name="action_register">Register</string>
+    <string name="action_verify">Verify</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_name">This name is too short</string>
+    <string name="error_invalid_phone">This phone no is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."</string>
+    <string name="remember_me">Remember me</string>
+
+    <string name="shared_preference_name">ProductsQRPref</string>
+    <string name="title_activity_verification">Sign In</string>
+    <string name="title_activity_registration">Registration</string>
+    <string name="title_activity_image_capture">Image Capture</string>
+    <string name="title_activity_main">EPharmacy</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_products">Products</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_back">Back</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="dont_know">Don\'t know</string>
+    <string name="refused_to_answer">Refused to answer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="radio_buttons_common">
+        <item>Yes</item>
+        <item>Don\'t know</item>
+        <item>No</item>
+        <item>Refused to answer</item>
+    </string-array>
+    <string-array name="radio_buttons_medical_condition">
+        <item>DM</item>
+        <item>Asthma</item>
+        <item>HTN</item>
+        <item>Kidney disease</item>
+    </string-array>
+    <string-array name="radio_buttons_site_swelling">
+        <item>Neck</item>
+        <item>Axila</item>
+        <item>Others</item>
+        <item>Kidney disease</item>
+    </string-array>
+    <string-array name="radio_buttons_site_disease">
+        <item>Pulmonary</item>
+        <item>Don\'t know</item>
+        <item>Extrapulmonary</item>
+        <item>Refused to answer</item>
+    </string-array>
+    <string-array name="radio_buttons_smoke">
+        <item>Yes</item>
+        <item>Refused to answer</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="radio_buttons_yesno">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="radio_buttons_3a">
+        <item>Less than 2 Weeks</item>
+        <item>Don\'t know</item>
+        <item>2-3 weeks</item>
+        <item>Refused to answer</item>
+        <item>More than 3 weeks</item>
+    </string-array>
+</resources>
