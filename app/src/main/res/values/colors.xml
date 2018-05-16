@@ -5,4 +5,6 @@
     <color name="colorPrimaryDark">#ff999999</color>
     <color name="applicationBackground">#e0dac4</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorAmber">#FFC200</color>
+    <color name="questionTextColor">@color/colorAccent</color>
 </resources>

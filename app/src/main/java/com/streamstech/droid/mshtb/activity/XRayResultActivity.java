@@ -8,10 +8,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -20,8 +19,8 @@ import com.streamstech.droid.mshtb.adapter.AutoCompleteListAdapter;
 import com.streamstech.droid.mshtb.data.persistent.DatabaseManager;
 import com.streamstech.droid.mshtb.data.persistent.Patient;
 import com.streamstech.droid.mshtb.data.persistent.PatientDao;
-import com.streamstech.droid.mshtb.data.persistent.TestIndication;
-import com.streamstech.droid.mshtb.data.persistent.TestIndicationDao;
+import com.streamstech.droid.mshtb.data.persistent.TestResultXRay;
+import com.streamstech.droid.mshtb.data.persistent.TestResultXRayDao;
 import com.streamstech.droid.mshtb.util.MyRadioGroup;
 import com.streamstech.droid.mshtb.util.UIUtil;
 import com.streamstech.droid.mshtb.util.Util;
@@ -34,7 +33,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
-public class TestIndicationActivity extends AppCompatActivity implements DialogInterface.OnDismissListener {
+public class XRayResultActivity extends AppCompatActivity implements DialogInterface.OnDismissListener {
 
     @BindView(R.id.txtSearch)
     AutoCompleteTextView txtSearch;
@@ -43,6 +42,11 @@ public class TestIndicationActivity extends AppCompatActivity implements DialogI
     @BindView(R.id.lblTime)
     TextView lblTime;
 
+    @BindView(R.id.dtOrderDate)
+    DatePicker dtOrderDate;
+    @BindView(R.id.dtResultDate)
+    DatePicker dtResultDate;
+
     @BindView(R.id.topLayout)
     LinearLayout topLayout;
     @BindView(R.id.scrollView)
@@ -50,21 +54,12 @@ public class TestIndicationActivity extends AppCompatActivity implements DialogI
 
     @BindView(R.id.radioXray)
     MyRadioGroup radioXray;
-    @BindView(R.id.radioXpert)
-    MyRadioGroup radioXpert;
-    @BindView(R.id.radioSmear)
-    MyRadioGroup radioSmear;
-    @BindView(R.id.radioUltrasound)
-    MyRadioGroup radioUltrasound;
-    @BindView(R.id.radioHistopathology)
-    MyRadioGroup radioHistopathology;
-    @BindView(R.id.radioCTScan)
-    MyRadioGroup radioCTScan;
-
-    @BindView(R.id.txtHistopathologySite)
-    EditText txtHistopathologySite;
-    @BindView(R.id.txtOthers)
-    EditText txtOthers;
+    @BindView(R.id.radioRadiology)
+    MyRadioGroup radioRadiology;
+    @BindView(R.id.radioRadiologyDiagnosis)
+    MyRadioGroup radioRadiologyDiagnosis;
+    @BindView(R.id.radioExtent)
+    MyRadioGroup radioExtent;
 
     @BindView(R.id.btnSave)
     Button btnSave;
@@ -74,24 +69,12 @@ public class TestIndicationActivity extends AppCompatActivity implements DialogI
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_indication);
+        setContentView(R.layout.activity_xray_result);
         ButterKnife.bind(this);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
-//        radioXray.anyoneChecked()
-        radioHistopathology.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (radioHistopathology.getSelectedIndex() == 0) {
-                    txtHistopathologySite.setVisibility(View.VISIBLE);
-                } else {
-                    txtHistopathologySite.setVisibility(View.GONE);
-                }
-            }
-        });
-
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             String pid  = bundle.getString("PID");
@@ -141,48 +124,45 @@ public class TestIndicationActivity extends AppCompatActivity implements DialogI
 
     @OnClick(R.id.btnSave)
     public void onClickAdd() {
-        if (!radioXray.anyoneChecked()) {
+
+        if (patient == null){
+            UIUtil.displayError(this, "Patient");
+            return;
+        }else if (!radioXray.anyoneChecked()) {
             UIUtil.displayError(this, "X-Ray");
             return;
-        } else if (!radioXpert.anyoneChecked()) {
-            UIUtil.displayError(this, "XPert");
+        } else if (!radioRadiology.anyoneChecked()) {
+            UIUtil.displayError(this, "Radiological finding");
             return;
-        } else if (!radioSmear.anyoneChecked()) {
-            UIUtil.displayError(this, "Smear");
+        } else if (!radioRadiologyDiagnosis.anyoneChecked()) {
+            UIUtil.displayError(this, "Radiological diagnosis");
             return;
-        } else if (!radioUltrasound.anyoneChecked()) {
-            UIUtil.displayError(this, "Ultrasound");
-            return;
-        } else if (!radioHistopathology.anyoneChecked()) {
-            UIUtil.displayError(this, "Histopathology");
-            return;
-        } else if (!radioCTScan.anyoneChecked()) {
-            UIUtil.displayError(this, "CT scan/MRI");
+        } else if (!radioExtent.anyoneChecked()) {
+            UIUtil.displayError(this, "Extent of disease");
             return;
         }
 
-        TestIndicationDao testIndicationDao = DatabaseManager.getInstance().getSession().getTestIndicationDao();
-        testIndicationDao.save(new TestIndication(null, patient.getPatientid(), radioXray.getSelectedIndex(),
-                radioXpert.getSelectedIndex(), radioSmear.getSelectedIndex(), radioUltrasound.getSelectedIndex(),
-                radioHistopathology.getSelectedIndex(), radioCTScan.getSelectedIndex(), txtHistopathologySite.getText().toString(),
-                txtOthers.getText().toString(), new Date(), false, 0.0, 0.0));
+        TestResultXRayDao testResultXRayDao = DatabaseManager.getInstance().getSession().getTestResultXRayDao();
+        testResultXRayDao.save(new TestResultXRay(null, patient.getPatientid(), Util.getDateFromDatePicker(dtOrderDate),
+                radioXray.getSelectedIndex(), Util.getDateFromDatePicker(dtResultDate), radioRadiology.getSelectedIndex(),
+                radioRadiologyDiagnosis.getSelectedIndex(), radioExtent.getSelectedIndex(),
+                new Date(), false, 0.0, 0.0));
 
-        UIUtil.showInfoDialog(this, SweetAlertDialog.SUCCESS_TYPE,  "Success", "Test indication completed", this);
+        if (radioRadiologyDiagnosis.getSelectedIndex() == 1){
+            patient.setTb(true);
+            DatabaseManager.getInstance().getSession().getPatientDao().update(patient);
+        }
+        UIUtil.showInfoDialog(this, SweetAlertDialog.SUCCESS_TYPE,  "Success", "X-Ray result added", this);
     }
 
     private void findInforamation(){
-        TestIndicationDao testIndicationDao = DatabaseManager.getInstance().getSession().getTestIndicationDao();
-        TestIndication testIndication = testIndicationDao.queryBuilder().where(TestIndicationDao.Properties.Patientid.eq(patient.getPatientid())).unique();
-        if (testIndication != null) {
-            ((RadioButton)radioXray.getChildAt(testIndication.getXray())).setChecked(true);
-            ((RadioButton)radioXpert.getChildAt(testIndication.getXpert())).setChecked(true);
-            ((RadioButton)radioSmear.getChildAt(testIndication.getSmear())).setChecked(true);
-            ((RadioButton)radioUltrasound.getChildAt(testIndication.getUltrasound())).setChecked(true);
-            ((RadioButton)radioHistopathology.getChildAt(testIndication.getHistopathology())).setChecked(true);
-            ((RadioButton)radioCTScan.getChildAt(testIndication.getCtmri())).setChecked(true);
-
-            txtHistopathologySite.setText(testIndication.getHistopathology_sample());
-            txtOthers.setText(testIndication.getOther());
+        TestResultXRayDao testResultXRayDao = DatabaseManager.getInstance().getSession().getTestResultXRayDao();
+        TestResultXRay testResultXRay = testResultXRayDao.queryBuilder().where(TestResultXRayDao.Properties.Patientid.eq(patient.getPatientid())).unique();
+        if (testResultXRay != null) {
+            ((RadioButton)radioXray.getChildAt(testResultXRay.getChesrxray())).setChecked(true);
+            ((RadioButton)radioRadiology.getChildAt(testResultXRay.getRadiologica_finding())).setChecked(true);
+            ((RadioButton)radioRadiologyDiagnosis.getChildAt(testResultXRay.getRadiologica_diagnosis())).setChecked(true);
+            ((RadioButton)radioExtent.getChildAt(testResultXRay.getExtent_disease())).setChecked(true);
             topLayout.setVisibility(View.GONE);
             scrollView.setVisibility(View.VISIBLE);
             btnSave.setVisibility(View.GONE);

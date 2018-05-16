@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo_profile" />
 
     <TextView
         android:id="@+id/lblUserName"
@@ -25,14 +25,14 @@
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
         android:textStyle="bold"
-        android:text="User name"
+        android:text="foysal"
         android:textColor="@color/colorWhite"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
     <TextView
         android:id="@+id/lblScreenerId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Screener ID"
+        android:text="001"
         android:textColor="@color/colorWhite"
         android:textSize="8dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -40,7 +40,7 @@
         android:id="@+id/lblLocationName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Location name"
+        android:text="SMC"
         android:textColor="@color/colorWhite"
         android:textSize="8dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />

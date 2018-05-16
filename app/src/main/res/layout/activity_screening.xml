@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:multi_line_radio_group="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/activity_vertical_margin"
@@ -9,8 +9,10 @@
     tools:context="com.streamstech.droid.mshtb.activity.ScreeningActivity">
 
     <LinearLayout
+        android:id="@+id/topLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:orientation="vertical">
 
         <android.support.v7.widget.AppCompatEditText
@@ -40,7 +42,8 @@
                 android:layout_weight=".25"
                 android:text="Gender" />
 
-            <RadioGroup
+            <com.streamstech.droid.mshtb.util.MyRadioGroup
+                android:id="@+id/radioGender"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -58,22 +61,43 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Female  " />
-            </RadioGroup>
+            </com.streamstech.droid.mshtb.util.MyRadioGroup>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="+" />
+            >
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/lblPatientID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Create a patient first" />
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_alignParentRight="true"
+                android:text="+" />
+        </RelativeLayout>
+
+
     </LinearLayout>
 
     <ScrollView
         android:id="@+id/formView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="visible">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSave"
+        android:layout_below="@+id/topLayout"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -88,6 +112,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/questionTextColor"
                     android:text="Do you have cough?" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -99,14 +125,18 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout3a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/colorPrimary"
                     android:text="Duration of cough in weeks?" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -119,14 +149,18 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout3b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/colorPrimary"
                     android:text="Do you have cough with blood?" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -140,12 +174,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/questionTextColor"
                     android:text="Have you had fever in last 2 weeks?" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -159,12 +195,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/questionTextColor"
                     android:text="Do you have night sweats during the last 2 weeks" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -178,12 +216,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/questionTextColor"
                     android:text="Have you had unexplained weight loss during the last 2 weeks?" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -197,12 +237,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/questionTextColor"
                     android:text="Have you ever had TB before?" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -214,14 +256,18 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout7a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/colorPrimary"
                     android:text="Site of disease?" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -235,12 +281,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/questionTextColor"
                     android:text="Does anyone in your family currently have TB?" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -252,14 +300,18 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout8a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/colorPrimary"
                     android:text="Site of Disease" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -273,12 +325,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/questionTextColor"
                     android:text="Swelling of gland" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -290,14 +344,18 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layout9a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/colorPrimary"
                     android:text="Site of swelling" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -311,12 +369,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/questionTextColor"
                     android:text="Do you have any following medical condition?" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -330,12 +390,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/question_text_size"
+                    android:textColor="@color/questionTextColor"
                     android:text="Do you smoke currently?" />
 
                 <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
@@ -346,43 +408,50 @@
                     multi_line_radio_group:radio_buttons="@array/radio_buttons_smoke" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingTop="10dp">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Is the adult a Presumptive of TB?" />
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Is the adult a Presumptive of TB?" />-->
 
-                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
-                    android:id="@+id/radioGroup12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    multi_line_radio_group:max_in_row="2"
-                    multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />
-            </LinearLayout>
+                <!--<com.whygraphics.multilineradiogroup.MultiLineRadioGroup-->
+                    <!--android:id="@+id/radioGroup12"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--multi_line_radio_group:max_in_row="2"-->
+                    <!--multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />-->
+            <!--</LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Test Advice" />
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Test Advice" />-->
 
-                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
-                    android:id="@+id/radioGroup13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    multi_line_radio_group:max_in_row="2"
-                    multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />
-            </LinearLayout>
+                <!--<com.whygraphics.multilineradiogroup.MultiLineRadioGroup-->
+                    <!--android:id="@+id/radioGroup13"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--multi_line_radio_group:max_in_row="2"-->
+                    <!--multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />-->
+            <!--</LinearLayout>-->
 
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Save" />
+</RelativeLayout>

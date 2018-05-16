@@ -23,7 +23,7 @@
     <string name="title_activity_verification">Sign In</string>
     <string name="title_activity_registration">Registration</string>
     <string name="title_activity_image_capture">Image Capture</string>
-    <string name="title_activity_main">EPharmacy</string>
+    <string name="title_activity_main">Challenge TB</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_products">Products</string>
 
@@ -49,6 +49,7 @@
     </string-array>
     <string-array name="radio_buttons_medical_condition">
         <item>DM</item>
+        <item>Don\'t know</item>
         <item>Asthma</item>
         <item>HTN</item>
         <item>Kidney disease</item>

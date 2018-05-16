@@ -31,6 +31,24 @@ public class UIUtil {
         }
     }
 
+    public static void showInfoDialog(final Context context, final int type, final String title, final String message,
+                                      final SweetAlertDialog.OnDismissListener onDismissListener)
+    {
+        SweetAlertDialog pDialog = new SweetAlertDialog(context, type);
+        if (type == SweetAlertDialog.PROGRESS_TYPE)
+            pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+
+        pDialog.setOnDismissListener(onDismissListener);
+        pDialog.setTitleText(title);
+        pDialog.setContentText(message);
+        if(!((Activity) context).isFinishing())
+        {
+            if (pDialog != null) {
+                pDialog.show();
+            }
+        }
+    }
+
     public static void showSweetProgress(final Context context, final String message,
                                          final boolean cancelable,
                                          SweetAlertDialog.OnSweetClickListener cancelListener) {
@@ -53,5 +71,9 @@ public class UIUtil {
             sweetAlertDialog.dismiss();
             sweetAlertDialog = null;
         }
+    }
+
+    public static void displayError(Context context, String message){
+        UIUtil.showInfoDialog(context, SweetAlertDialog.WARNING_TYPE, "Error", String.format("%s information missing", message));
     }
 }

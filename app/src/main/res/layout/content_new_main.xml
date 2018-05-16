@@ -9,15 +9,21 @@
     tools:context="com.streamstech.droid.mshtb.activity.NewMainActivity"
     tools:showIn="@layout/app_bar_new_main">
 
-    <ListView
-        android:id="@+id/lstUploadList"
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:layout_alignParentTop="true"
+        app:menu="@menu/navigation"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/layoutHeader"
-        android:layout_margin="@dimen/activity_vertical_margin"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="0.5dp"
-       />
-
+        android:layout_below="@id/navigation"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+         />
 </RelativeLayout>
 

@@ -47,7 +47,7 @@ public class SplashActivity extends Activity {
     }
 
     private void startLandingActivity() {
-        startActivity(new Intent(this, NewMainActivity.class));
+        startActivity(new Intent(this, Verification.class));
         finish();
     }
 

@@ -73,7 +73,13 @@ public class Verification extends AppCompatActivity implements SweetAlertDialog.
     @OnClick(R.id.btnVerify)
     public void onVerifyClicked(){
         if (txtPassword.getText().toString().trim().length() < 4){
-            UIUtil.showInfoDialog(this, SweetAlertDialog.WARNING_TYPE, "Information", "Invalid code");
+            UIUtil.showInfoDialog(this, SweetAlertDialog.WARNING_TYPE, "Information", "Invalid password");
+            return;
+        }
+
+        if (!txtUserName.getText().toString().trim().equals("foysal") ||
+                !txtPassword.getText().toString().trim().equals("1234")){
+            UIUtil.showInfoDialog(this, SweetAlertDialog.ERROR_TYPE, "Error", "Invalid user name or password");
             return;
         }
         UIUtil.showSweetProgress(this, "Verifying...", false, this);

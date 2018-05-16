@@ -5,6 +5,8 @@ import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.NotNull;
 import org.greenrobot.greendao.annotation.Generated;
 
+import java.util.Date;
+
 /**
  * Created by AKASH-LAPTOP on 8/14/2017.
  */
@@ -51,14 +53,19 @@ public class Screening {
     @NotNull
     private int q13;
     @NotNull
-    private long createdtime;
+    private Date createdtime;
     @NotNull
     private boolean uploaded;
-    @Generated(hash = 1886669601)
+    @NotNull
+    private double longitude;
+    @NotNull
+    private double latitude;
+    @Generated(hash = 844041961)
     public Screening(Long id, @NotNull String patientid, int q3, int q3a, int q3b,
             int q4, int q5, int q6, int q7, int q7a, int q8, int q8a, int q9,
             int q9a, String q9aothers, int q10, int q11, int q12, int q13,
-            long createdtime, boolean uploaded) {
+            @NotNull Date createdtime, boolean uploaded, double longitude,
+            double latitude) {
         this.id = id;
         this.patientid = patientid;
         this.q3 = q3;
@@ -80,6 +87,8 @@ public class Screening {
         this.q13 = q13;
         this.createdtime = createdtime;
         this.uploaded = uploaded;
+        this.longitude = longitude;
+        this.latitude = latitude;
     }
     @Generated(hash = 1448845937)
     public Screening() {
@@ -198,10 +207,10 @@ public class Screening {
     public void setQ13(int q13) {
         this.q13 = q13;
     }
-    public long getCreatedtime() {
+    public Date getCreatedtime() {
         return this.createdtime;
     }
-    public void setCreatedtime(long createdtime) {
+    public void setCreatedtime(Date createdtime) {
         this.createdtime = createdtime;
     }
     public boolean getUploaded() {
@@ -209,5 +218,17 @@ public class Screening {
     }
     public void setUploaded(boolean uploaded) {
         this.uploaded = uploaded;
+    }
+    public double getLongitude() {
+        return this.longitude;
+    }
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+    public double getLatitude() {
+        return this.latitude;
+    }
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
     }
 }

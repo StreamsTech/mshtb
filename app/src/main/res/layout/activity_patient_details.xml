@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_vertical_margin"
+    tools:context="com.streamstech.droid.mshtb.activity.PatientDetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <AutoCompleteTextView
+            android:id="@+id/txtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search a patient" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:visibility="visible"
+        android:layout_below="@id/topLayout">
+
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatCheckedTextView
+                android:id="@+id/checkedTextTB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/question_text_size"
+                android:textColor="@color/questionTextColor"
+                android:text="TB" />
+
+            <android.support.v7.widget.AppCompatCheckedTextView
+                android:id="@+id/checkedTextPTB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/question_text_size"
+                android:textColor="@color/questionTextColor"
+                android:layout_marginTop="10dp"
+                android:text="Presumptive TB" />
+
+            <android.support.v7.widget.AppCompatCheckedTextView
+                android:id="@+id/checkedTextScreening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/question_text_size"
+                android:textColor="@color/questionTextColor"
+                android:layout_marginTop="10dp"
+                android:text="Screening form" />
+
+            <android.support.v7.widget.AppCompatCheckedTextView
+                android:id="@+id/checkedTextTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/question_text_size"
+                android:textColor="@color/questionTextColor"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:text="Test indication form" />
+
+            <android.support.v7.widget.AppCompatCheckedTextView
+                android:id="@+id/checkedTextResultXray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/question_text_size"
+                android:textColor="@color/questionTextColor"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="XRay result" />
+
+            <android.support.v7.widget.AppCompatCheckedTextView
+                android:id="@+id/checkedTextResultXPert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/question_text_size"
+                android:textColor="@color/questionTextColor"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="XPert MRB/RIF result" />
+
+            <android.support.v7.widget.AppCompatCheckedTextView
+                android:id="@+id/checkedTextResultSmear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/question_text_size"
+                android:textColor="@color/questionTextColor"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="AFB Smear" />
+
+            <android.support.v7.widget.AppCompatCheckedTextView
+                android:id="@+id/checkedTextResultHistopathology"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/question_text_size"
+                android:textColor="@color/questionTextColor"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Histopathology" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
