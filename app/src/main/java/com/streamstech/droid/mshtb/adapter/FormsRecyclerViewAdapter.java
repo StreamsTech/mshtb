@@ -9,16 +9,16 @@ import android.widget.TextView;
 
 import com.streamstech.droid.mshtb.R;
 import com.streamstech.droid.mshtb.data.Forms;
-import com.streamstech.droid.mshtb.fragement.FormsFragment;
+import com.streamstech.droid.mshtb.fragement.FASTFormsFragment;
 
 import java.util.List;
 
 public class FormsRecyclerViewAdapter extends RecyclerView.Adapter<FormsRecyclerViewAdapter.ViewHolder> {
 
     private final List<Forms> mValues;
-    private final FormsFragment.OnListFragmentInteractionListener mListener;
+    private final FASTFormsFragment.OnListFragmentInteractionListener mListener;
 
-    public FormsRecyclerViewAdapter(List<Forms> items, FormsFragment.OnListFragmentInteractionListener listener) {
+    public FormsRecyclerViewAdapter(List<Forms> items, FASTFormsFragment.OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }

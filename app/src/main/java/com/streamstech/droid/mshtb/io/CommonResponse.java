@@ -14,6 +14,7 @@ public class CommonResponse {
     private int pagesize;
     private int totalitems;
     private long associatedid;
+    private String headermessage;
     private List<Object> results = new ArrayList<>();
 
     public int getStatus() {
@@ -78,5 +79,13 @@ public class CommonResponse {
 
     public void setResults(List<Object> results) {
         this.results = results;
+    }
+
+    public String getHeadermessage() {
+        return headermessage;
+    }
+
+    public void setHeadermessage(String headermessage) {
+        this.headermessage = headermessage;
     }
 }

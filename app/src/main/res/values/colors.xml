@@ -6,5 +6,7 @@
     <color name="applicationBackground">#e0dac4</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorAmber">#FFC200</color>
-    <color name="questionTextColor">@color/colorAccent</color>
+    <color name="questionTextColor">@color/colorWhite</color>
+    <color name="questionBackColor">@color/colorPrimaryDark</color>
+    <color name="questionSecondaryTextColor">@color/colorAmber</color>
 </resources>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:multi_line_radio_group="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.streamstech.droid.mshtb.activity.PETTreatmentStartActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSave">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="1. Regimen"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    multi_line_radio_group:default_button="Not Done"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_pet_regimen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="2. Drugs 1"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtDrugone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Add the drugs here"
+                        android:text="" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="2a. Drugs 2"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtDrugtwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Add the drugs here"
+                        android:text="" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="3. Treatment initiation date"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <DatePicker
+                    android:id="@+id/dtStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"></DatePicker>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="4. Name of the treatment supporter"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtSupporter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Supporter name"
+                        android:inputType="textLongMessage"
+                        android:singleLine="true"
+                        android:text="" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="5. Treatment supporter mobile number"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtSupporterContactNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Supporter contact no"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:maxLength="11"
+                        android:textColor="@color/colorAccent" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="6. Relationship of treatment supporter with the patient"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    multi_line_radio_group:default_button="Not Done"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_relationship" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout6a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="6a. Other relationship"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtOtherRelationship"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Other relation"
+                        android:textColor="@color/colorAccent" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Save" />
+</RelativeLayout>

@@ -20,13 +20,16 @@ import com.streamstech.droid.mshtb.adapter.AutoCompleteListAdapter;
 import com.streamstech.droid.mshtb.data.persistent.DatabaseManager;
 import com.streamstech.droid.mshtb.data.persistent.Patient;
 import com.streamstech.droid.mshtb.data.persistent.PatientDao;
+import com.streamstech.droid.mshtb.data.persistent.TestIndicationDao;
 import com.streamstech.droid.mshtb.data.persistent.TestResultHistopathology;
 import com.streamstech.droid.mshtb.data.persistent.TestResultHistopathologyDao;
 import com.streamstech.droid.mshtb.data.persistent.TestResultXRay;
 import com.streamstech.droid.mshtb.data.persistent.TestResultXRayDao;
+import com.streamstech.droid.mshtb.util.MSHTBApplication;
 import com.streamstech.droid.mshtb.util.MyRadioGroup;
 import com.streamstech.droid.mshtb.util.UIUtil;
 import com.streamstech.droid.mshtb.util.Util;
+import com.whygraphics.multilineradiogroup.MultiLineRadioGroup;
 
 import java.util.Date;
 import java.util.List;
@@ -40,6 +43,8 @@ public class HistiopathologyResultActivity extends AppCompatActivity implements 
 
     @BindView(R.id.txtSearch)
     AutoCompleteTextView txtSearch;
+    @BindView(R.id.lblReadonlyName)
+    TextView lblReadonlyName;
     @BindView(R.id.lblPatient)
     TextView lblPatient;
     @BindView(R.id.lblTime)
@@ -56,9 +61,9 @@ public class HistiopathologyResultActivity extends AppCompatActivity implements 
     ScrollView scrollView;
 
     @BindView(R.id.radioHistopathology)
-    MyRadioGroup radioHistopathology;
+    MultiLineRadioGroup radioHistopathology;
     @BindView(R.id.radioHistopathologyResult)
-    MyRadioGroup radioHistopathologyResult;
+    MultiLineRadioGroup radioHistopathologyResult;
 
     @BindView(R.id.txtHistopathologySite)
     EditText txtHistopathologySite;
@@ -87,6 +92,9 @@ public class HistiopathologyResultActivity extends AppCompatActivity implements 
             }else{
                 topLayout.setVisibility(View.GONE);
                 scrollView.setVisibility(View.VISIBLE);
+                lblReadonlyName.setVisibility(View.VISIBLE);
+                lblReadonlyName.setText(patient.getName());
+                MSHTBApplication.getInstance().hideKeyboard(this);
                 findInforamation();
                 btnSave.setVisibility(View.GONE);
             }
@@ -94,8 +102,7 @@ public class HistiopathologyResultActivity extends AppCompatActivity implements 
 
         txtSearch.setThreshold(1);//will start working from first character
 
-        PatientDao patientDao = DatabaseManager.getInstance().getSession().getPatientDao();
-        List<Patient> patientList = patientDao.loadAll();
+        List<Patient> patientList = MSHTBApplication.getInstance().getPatientForResultInput(TestIndicationDao.Properties.Histopathology);
         AutoCompleteListAdapter adapter = new AutoCompleteListAdapter(this,
                 R.layout.autocomplete_list_row, patientList);
         txtSearch.setAdapter(adapter);
@@ -111,6 +118,7 @@ public class HistiopathologyResultActivity extends AppCompatActivity implements 
                     patient = (Patient) adapterView.getItemAtPosition(i);
                     lblPatient.setText(patient.getName() + "\n" + patient.getPatientid());
                     txtSearch.setText(patient.getName());
+                    MSHTBApplication.getInstance().hideKeyboard(HistiopathologyResultActivity.this);
                     findInforamation();
                 }
             };
@@ -129,24 +137,24 @@ public class HistiopathologyResultActivity extends AppCompatActivity implements 
         if (patient == null){
             UIUtil.displayError(this, "Patient");
             return;
-        }else if (!radioHistopathology.anyoneChecked()) {
+        }else if (radioHistopathology.getCheckedRadioButtonIndex() == -1) {
             UIUtil.displayError(this, "Histopathology");
             return;
-        } else if (!radioHistopathologyResult.anyoneChecked()) {
+        } else if (radioHistopathologyResult.getCheckedRadioButtonIndex() == -1) {
             UIUtil.displayError(this, "Histopathology result");
             return;
         }
 
         TestResultHistopathologyDao testResultHistopathologyDao= DatabaseManager.getInstance().getSession().getTestResultHistopathologyDao();
-        testResultHistopathologyDao.save(new TestResultHistopathology(null, patient.getPatientid(), Util.getDateFromDatePicker(dtOrderDate),
-                radioHistopathology.getSelectedIndex(), txtHistopathologySite.getText().toString(),
-                Util.getDateFromDatePicker(dtResultDate), radioHistopathologyResult.getSelectedIndex(),
-                new Date(), false, 0.0, 0.0));
+        testResultHistopathologyDao.save(new TestResultHistopathology(null, patient.getPatientid(), Util.getDateFromDatePicker(dtOrderDate).getTime(),
+                radioHistopathology.getCheckedRadioButtonIndex(), txtHistopathologySite.getText().toString(),
+                Util.getDateFromDatePicker(dtResultDate).getTime(), radioHistopathologyResult.getCheckedRadioButtonIndex(),
+                new Date().getTime(), false, 0.0, 0.0));
 
-        if (radioHistopathologyResult.getSelectedIndex() == 1){
-            patient.setTb(true);
-            DatabaseManager.getInstance().getSession().getPatientDao().update(patient);
-        }
+//        if (radioHistopathologyResult.getSelectedIndex() == 1){
+//            patient.setTb(true);
+//            DatabaseManager.getInstance().getSession().getPatientDao().update(patient);
+//        }
         UIUtil.showInfoDialog(this, SweetAlertDialog.SUCCESS_TYPE,  "Success", "Histopathology result added", this);
     }
 
@@ -154,8 +162,8 @@ public class HistiopathologyResultActivity extends AppCompatActivity implements 
         TestResultHistopathologyDao testResultHistopathologyDao= DatabaseManager.getInstance().getSession().getTestResultHistopathologyDao();
         TestResultHistopathology testResultHistopathology = testResultHistopathologyDao.queryBuilder().where(TestResultHistopathologyDao.Properties.Patientid.eq(patient.getPatientid())).unique();
         if (testResultHistopathology != null) {
-            ((RadioButton)radioHistopathology.getChildAt(testResultHistopathology.getHistopathology())).setChecked(true);
-            ((RadioButton)radioHistopathologyResult.getChildAt(testResultHistopathology.getResult())).setChecked(true);
+            radioHistopathology.checkAt(testResultHistopathology.getHistopathology());
+            radioHistopathologyResult.checkAt(testResultHistopathology.getResult());
             txtHistopathologySite.setText(testResultHistopathology.getHistopathology_site());
             topLayout.setVisibility(View.GONE);
             scrollView.setVisibility(View.VISIBLE);

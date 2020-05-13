@@ -14,6 +14,8 @@ import com.streamstech.droid.mshtb.R;
 import com.streamstech.droid.mshtb.adapter.FormsRecyclerViewAdapter;
 import com.streamstech.droid.mshtb.data.Forms;
 import com.streamstech.droid.mshtb.data.FormsType;
+import com.streamstech.droid.mshtb.data.persistent.PETEnrollment;
+import com.streamstech.droid.mshtb.data.persistent.PETRegistration;
 import com.streamstech.droid.mshtb.data.persistent.Patient;
 
 import java.util.ArrayList;
@@ -26,7 +28,7 @@ import java.util.List;
  * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
  * interface.
  */
-public class FormsFragment extends Fragment {
+public class FASTFormsFragment extends Fragment {
 
     private static final String ARG_COLUMN_COUNT = "column-count";
     private int mColumnCount = 1;
@@ -36,13 +38,13 @@ public class FormsFragment extends Fragment {
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public FormsFragment() {
+    public FASTFormsFragment() {
     }
 
     // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
-    public static FormsFragment newInstance(int columnCount) {
-        FormsFragment fragment = new FormsFragment();
+    public static FASTFormsFragment newInstance(int columnCount) {
+        FASTFormsFragment fragment = new FASTFormsFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
         fragment.setArguments(args);
@@ -111,6 +113,8 @@ public class FormsFragment extends Fragment {
         list.add(new Forms("XPert MTB/RIF Result", "FAST", FormsType.RESULT_XPERT,android.R.drawable.ic_menu_camera));
         list.add(new Forms("AFB Smear Result", "FAST", FormsType.RESULT_SMEAR,android.R.drawable.ic_menu_camera));
         list.add(new Forms("Histopathology Result", "FAST", FormsType.RESULT_HISTOPATHOLOGY, android.R.drawable.ic_menu_camera));
+        list.add(new Forms("Treatment Initiation", "FAST", FormsType.TREATMENT_INITIATION, android.R.drawable.ic_menu_camera));
+        list.add(new Forms("Treatment Outcome", "FAST", FormsType.TREATMENT_OUTCOME, android.R.drawable.ic_menu_camera));
         return list;
     }
 
@@ -127,5 +131,7 @@ public class FormsFragment extends Fragment {
     public interface OnListFragmentInteractionListener {
         void onListFragmentInteraction(Forms item);
         void onListFragmentInteraction(Patient item);
+        void onListFragmentInteraction(PETRegistration item);
+        void onListFragmentInteraction(PETEnrollment item);
     }
 }

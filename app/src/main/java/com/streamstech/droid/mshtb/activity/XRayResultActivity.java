@@ -19,11 +19,17 @@ import com.streamstech.droid.mshtb.adapter.AutoCompleteListAdapter;
 import com.streamstech.droid.mshtb.data.persistent.DatabaseManager;
 import com.streamstech.droid.mshtb.data.persistent.Patient;
 import com.streamstech.droid.mshtb.data.persistent.PatientDao;
+import com.streamstech.droid.mshtb.data.persistent.TestIndication;
+import com.streamstech.droid.mshtb.data.persistent.TestIndicationDao;
 import com.streamstech.droid.mshtb.data.persistent.TestResultXRay;
 import com.streamstech.droid.mshtb.data.persistent.TestResultXRayDao;
+import com.streamstech.droid.mshtb.util.MSHTBApplication;
 import com.streamstech.droid.mshtb.util.MyRadioGroup;
 import com.streamstech.droid.mshtb.util.UIUtil;
 import com.streamstech.droid.mshtb.util.Util;
+
+import org.greenrobot.greendao.query.Join;
+import org.greenrobot.greendao.query.QueryBuilder;
 
 import java.util.Date;
 import java.util.List;
@@ -37,6 +43,8 @@ public class XRayResultActivity extends AppCompatActivity implements DialogInter
 
     @BindView(R.id.txtSearch)
     AutoCompleteTextView txtSearch;
+    @BindView(R.id.lblReadonlyName)
+    TextView lblReadonlyName;
     @BindView(R.id.lblPatient)
     TextView lblPatient;
     @BindView(R.id.lblTime)
@@ -85,15 +93,16 @@ public class XRayResultActivity extends AppCompatActivity implements DialogInter
             }else{
                 topLayout.setVisibility(View.GONE);
                 scrollView.setVisibility(View.VISIBLE);
+                lblReadonlyName.setVisibility(View.VISIBLE);
+                lblReadonlyName.setText(patient.getName());
+                MSHTBApplication.getInstance().hideKeyboard(this);
                 findInforamation();
                 btnSave.setVisibility(View.GONE);
             }
         }
 
         txtSearch.setThreshold(1);//will start working from first character
-
-        PatientDao patientDao = DatabaseManager.getInstance().getSession().getPatientDao();
-        List<Patient> patientList = patientDao.loadAll();
+        List<Patient> patientList = MSHTBApplication.getInstance().getPatientForResultInput(TestIndicationDao.Properties.Xray);
         AutoCompleteListAdapter adapter = new AutoCompleteListAdapter(this,
                 R.layout.autocomplete_list_row, patientList);
         txtSearch.setAdapter(adapter);
@@ -109,6 +118,7 @@ public class XRayResultActivity extends AppCompatActivity implements DialogInter
                     patient = (Patient) adapterView.getItemAtPosition(i);
                     lblPatient.setText(patient.getName() + "\n" + patient.getPatientid());
                     txtSearch.setText(patient.getName());
+                    MSHTBApplication.getInstance().hideKeyboard(XRayResultActivity.this);
                     findInforamation();
                 }
             };
@@ -143,15 +153,15 @@ public class XRayResultActivity extends AppCompatActivity implements DialogInter
         }
 
         TestResultXRayDao testResultXRayDao = DatabaseManager.getInstance().getSession().getTestResultXRayDao();
-        testResultXRayDao.save(new TestResultXRay(null, patient.getPatientid(), Util.getDateFromDatePicker(dtOrderDate),
-                radioXray.getSelectedIndex(), Util.getDateFromDatePicker(dtResultDate), radioRadiology.getSelectedIndex(),
+        testResultXRayDao.save(new TestResultXRay(null, patient.getPatientid(), Util.getDateFromDatePicker(dtOrderDate).getTime(),
+                radioXray.getSelectedIndex(), Util.getDateFromDatePicker(dtResultDate).getTime(), radioRadiology.getSelectedIndex(),
                 radioRadiologyDiagnosis.getSelectedIndex(), radioExtent.getSelectedIndex(),
-                new Date(), false, 0.0, 0.0));
+                new Date().getTime(), false, 0.0, 0.0));
 
-        if (radioRadiologyDiagnosis.getSelectedIndex() == 1){
-            patient.setTb(true);
-            DatabaseManager.getInstance().getSession().getPatientDao().update(patient);
-        }
+//        if (radioRadiologyDiagnosis.getSelectedIndex() == 1){
+//            patient.setTb(true);
+//            DatabaseManager.getInstance().getSession().getPatientDao().update(patient);
+//        }
         UIUtil.showInfoDialog(this, SweetAlertDialog.SUCCESS_TYPE,  "Success", "X-Ray result added", this);
     }
 
@@ -163,6 +173,8 @@ public class XRayResultActivity extends AppCompatActivity implements DialogInter
             ((RadioButton)radioRadiology.getChildAt(testResultXRay.getRadiologica_finding())).setChecked(true);
             ((RadioButton)radioRadiologyDiagnosis.getChildAt(testResultXRay.getRadiologica_diagnosis())).setChecked(true);
             ((RadioButton)radioExtent.getChildAt(testResultXRay.getExtent_disease())).setChecked(true);
+            Util.setDate(testResultXRay.getOrderdate(), dtOrderDate);
+            Util.setDate(testResultXRay.getResultdate(), dtResultDate);
             topLayout.setVisibility(View.GONE);
             scrollView.setVisibility(View.VISIBLE);
             btnSave.setVisibility(View.GONE);

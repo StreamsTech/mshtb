@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:multi_line_radio_group="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.streamstech.droid.mshtb.activity.PETTestOrderActivity">
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/topLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<AutoCompleteTextView-->
+            <!--android:id="@+id/txtSearch"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Search" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingBottom="10dp"-->
+            <!--android:weightSum="1">-->
+
+            <!--<android.support.v7.widget.AppCompatTextView-->
+                <!--android:id="@+id/lblPatient"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight=".5"-->
+                <!--android:text="&#45;&#45;\n&#45;&#45;"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textSize="15dp" />-->
+
+            <!--<android.support.v7.widget.AppCompatTextView-->
+                <!--android:id="@+id/lblTime"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight=".5"-->
+                <!--android:background="@color/colorAccent"-->
+                <!--android:gravity="center"-->
+                <!--android:text="2018-08-09 04:45PM"-->
+                <!--android:textColor="@color/colorWhite"-->
+                <!--android:textSize="15dp" />-->
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSave"
+        android:layout_below="@+id/topLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="1. Chest X-Ray"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    multi_line_radio_group:default_button="No"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="2. Smear Microscopy"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    multi_line_radio_group:default_button="No"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="3. Xpert MTB/RIF"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    multi_line_radio_group:default_button="No"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="4. TST/MT"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    multi_line_radio_group:default_button="No"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="5. CBC &amp; ESR"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    multi_line_radio_group:default_button="No"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="6. Histopathology/FNAC"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    multi_line_radio_group:default_button="No"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="7. CT Scan"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    multi_line_radio_group:default_button="No"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="8. Ultrasound (abdomen)"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    multi_line_radio_group:default_button="No"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Save" />
+</RelativeLayout>

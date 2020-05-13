@@ -73,17 +73,33 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/lblReadonlyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/question_text_size"
+                android:textColor="@color/questionTextColor"
+                android:background="@color/colorAccent"
+                android:padding="5dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:text="Md. Shafiul Parvez" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/question_text_size"
                     android:textColor="@color/questionTextColor"
-                    android:text="Chest X-Ray" />
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="1. Chest X-Ray" />
 
                 <com.streamstech.droid.mshtb.util.MyRadioGroup
                     android:id="@+id/radioXray"
@@ -111,11 +127,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/question_text_size"
                     android:textColor="@color/questionTextColor"
-                    android:text="Gene Xpert" />
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="2. GeneXpert" />
 
                 <com.streamstech.droid.mshtb.util.MyRadioGroup
                     android:id="@+id/radioXpert"
@@ -127,7 +145,6 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                         
                         android:text="@string/yes" />
 
                     <RadioButton
@@ -144,11 +161,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/question_text_size"
                     android:textColor="@color/questionTextColor"
-                    android:text="Smear Microscopy" />
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="3. Smear Microscopy" />
 
                 <com.streamstech.droid.mshtb.util.MyRadioGroup
                     android:id="@+id/radioSmear"
@@ -176,11 +195,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/question_text_size"
                     android:textColor="@color/questionTextColor"
-                    android:text="Ultrasound" />
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="4. Ultrasound" />
 
                 <com.streamstech.droid.mshtb.util.MyRadioGroup
                     android:id="@+id/radioUltrasound"
@@ -208,11 +229,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/question_text_size"
                     android:textColor="@color/questionTextColor"
-                    android:text="Histopathology (FNAC/Biopsy)" />
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="5. Histopathology (FNAC/Biopsy)" />
 
                 <com.streamstech.droid.mshtb.util.MyRadioGroup
                     android:id="@+id/radioHistopathology"
@@ -224,7 +247,6 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                         
                         android:text="@string/yes" />
 
                     <RadioButton
@@ -240,7 +262,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="gone"
-                android:hint="Site for Histopathology Sample" />
+                android:hint="5.a Site for Histopathology Sample" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -248,11 +270,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/question_text_size"
                     android:textColor="@color/questionTextColor"
-                    android:text="CT scan/MRI" />
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="6. CT scan/MRI" />
 
                 <com.streamstech.droid.mshtb.util.MyRadioGroup
                     android:id="@+id/radioCTScan"
@@ -264,7 +288,6 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                         
                         android:text="@string/yes" />
 
                     <RadioButton

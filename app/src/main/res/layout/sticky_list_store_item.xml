@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:padding="10dp"
+    android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft">
+
+    <TextView
+        android:id="@+id/expandedListItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:gravity="left"
+        android:paddingLeft="10dp"
+        android:text="Patient name" />
+
+    <TextView
+        android:id="@+id/expandedListItem2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:gravity="right"
+        android:text="545454564644" />
+</LinearLayout>

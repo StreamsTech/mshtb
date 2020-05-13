@@ -23,10 +23,19 @@
         android:id="@+id/lblUserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
         android:textStyle="bold"
+        android:paddingTop="5dp"
         android:text="foysal"
         android:textColor="@color/colorWhite"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/lblMobileno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textColor="@color/colorWhite"
+        android:textSize="8dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
     <TextView
         android:id="@+id/lblScreenerId"
@@ -36,12 +45,5 @@
         android:textColor="@color/colorWhite"
         android:textSize="8dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-    <TextView
-        android:id="@+id/lblLocationName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SMC"
-        android:textColor="@color/colorWhite"
-        android:textSize="8dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
 </LinearLayout>

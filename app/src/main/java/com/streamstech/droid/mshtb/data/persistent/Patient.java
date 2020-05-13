@@ -5,8 +5,6 @@ import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.NotNull;
 import org.greenrobot.greendao.annotation.Generated;
 
-import java.util.Date;
-
 /**
  * Created by AKASH-LAPTOP on 8/14/2017.
  */
@@ -24,37 +22,56 @@ public class Patient {
     @NotNull
     private boolean tb;
     @NotNull
+    private int sensivity;
+    @NotNull
+    private int siteofdisease;
+    @NotNull
     private String name;
     @NotNull
-    private int age;
+    private double age;
     @NotNull
     private String gender;
+    private String contantno;
     @NotNull
-    private Date createdtime;
+    private long createdtime;
     @NotNull
     private boolean uploaded;
+
+    @NotNull
+    private boolean dirty;
 
     @NotNull
     private double longitude;
     @NotNull
     private double latitude;
-    @Generated(hash = 589589155)
+
+    private String address;
+    private boolean indexpatient;
+    @Generated(hash = 2024417609)
     public Patient(Long id, @NotNull String patientid, @NotNull String screenerid,
-            boolean presumtivetb, boolean tb, @NotNull String name, int age,
-            @NotNull String gender, @NotNull Date createdtime, boolean uploaded,
-            double longitude, double latitude) {
+            boolean presumtivetb, boolean tb, int sensivity, int siteofdisease,
+            @NotNull String name, double age, @NotNull String gender,
+            String contantno, long createdtime, boolean uploaded, boolean dirty,
+            double longitude, double latitude, String address,
+            boolean indexpatient) {
         this.id = id;
         this.patientid = patientid;
         this.screenerid = screenerid;
         this.presumtivetb = presumtivetb;
         this.tb = tb;
+        this.sensivity = sensivity;
+        this.siteofdisease = siteofdisease;
         this.name = name;
         this.age = age;
         this.gender = gender;
+        this.contantno = contantno;
         this.createdtime = createdtime;
         this.uploaded = uploaded;
+        this.dirty = dirty;
         this.longitude = longitude;
         this.latitude = latitude;
+        this.address = address;
+        this.indexpatient = indexpatient;
     }
     @Generated(hash = 1655646460)
     public Patient() {
@@ -89,16 +106,28 @@ public class Patient {
     public void setTb(boolean tb) {
         this.tb = tb;
     }
+    public int getSensivity() {
+        return this.sensivity;
+    }
+    public void setSensivity(int sensivity) {
+        this.sensivity = sensivity;
+    }
+    public int getSiteofdisease() {
+        return this.siteofdisease;
+    }
+    public void setSiteofdisease(int siteofdisease) {
+        this.siteofdisease = siteofdisease;
+    }
     public String getName() {
         return this.name;
     }
     public void setName(String name) {
         this.name = name;
     }
-    public int getAge() {
+    public double getAge() {
         return this.age;
     }
-    public void setAge(int age) {
+    public void setAge(double age) {
         this.age = age;
     }
     public String getGender() {
@@ -107,10 +136,16 @@ public class Patient {
     public void setGender(String gender) {
         this.gender = gender;
     }
-    public Date getCreatedtime() {
+    public String getContantno() {
+        return this.contantno;
+    }
+    public void setContantno(String contantno) {
+        this.contantno = contantno;
+    }
+    public long getCreatedtime() {
         return this.createdtime;
     }
-    public void setCreatedtime(Date createdtime) {
+    public void setCreatedtime(long createdtime) {
         this.createdtime = createdtime;
     }
     public boolean getUploaded() {
@@ -118,6 +153,12 @@ public class Patient {
     }
     public void setUploaded(boolean uploaded) {
         this.uploaded = uploaded;
+    }
+    public boolean getDirty() {
+        return this.dirty;
+    }
+    public void setDirty(boolean dirty) {
+        this.dirty = dirty;
     }
     public double getLongitude() {
         return this.longitude;
@@ -131,4 +172,17 @@ public class Patient {
     public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
+    public String getAddress() {
+        return this.address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    public boolean getIndexpatient() {
+        return this.indexpatient;
+    }
+    public void setIndexpatient(boolean indexpatient) {
+        this.indexpatient = indexpatient;
+    }
+
 }

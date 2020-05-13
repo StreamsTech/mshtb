@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Challenge TB</string>
+    <string name="app_name">FAST and PET Tools</string>
 
     <!-- Strings related to login -->
+    <string name="prompt_name">Name</string>
     <string name="prompt_first_name">First name</string>
     <string name="prompt_last_name">Last name</string>
     <string name="prompt_phone">Your phone no</string>
@@ -18,6 +19,11 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."</string>
     <string name="remember_me">Remember me</string>
+    <string name="about_para_one">MSH along with IRD, MTP, and MoHFW is implementing Zero TB Cities initiative. The project was aimed at improving TB problem scenario in the country. The application hasd two forms FAST (Find patients Actively by cough surveillance and rapid molecular sputum testing, Separate safely, and Treat effectively) and PET (Post Exposure Treatment). The objective of implementing the data collection app was to equip these two forms with a smart tool that can help collect, share and manage TB related information. The FAST form aims to swiftly identify probable TB patients and assist in providing appropriate treatment, care and support services to them. The PET form ensures support services to the family members of the TB patients, and they are given the opportunity to be tested for TB. The app enabled real-time data collection using smart devices, recording and storing data offline, and viewing data in informative dashboards.\n</string>
+
+    <string name="about_para_two">Streams Tech developed this smart data collection app for the Challenge TB (CTB) project funded by USAID.Streams Tech also designed necessary security modules, provided training to the staffs of CTB project, and hosted the program in a secured server.
+    </string>
+    <string name="splash_message">Mobile Application for <b>FAST</b> (Find patients Actively by cough surveillance and rapid molecular sputum testing, Separate safely, and Treat effectively) and <b>PET</b> (Post Exposure Treatment)</string>
 
     <string name="shared_preference_name">ProductsQRPref</string>
     <string name="title_activity_verification">Sign In</string>
@@ -41,24 +47,55 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string-array name="sites_samples">
+        <item>Site 1</item>
+        <item>Site 2</item>
+        <item>Site 3</item>
+        <item>Site 4</item>
+        <item>Site 5</item>
+    </string-array>
+
     <string-array name="radio_buttons_common">
         <item>Yes</item>
         <item>Don\'t know</item>
         <item>No</item>
         <item>Refused to answer</item>
     </string-array>
+
+    <string-array name="radio_buttons_gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="radio_patient_type">
+        <item>New</item>
+        <item>After Failure</item>
+        <item>Relapse</item>
+        <item>Lost to follow-up</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="radio_treatment_outcome">
+        <item>Cured</item>
+        <item>Treatment completed</item>
+        <item>Died</item>
+        <item>Treatment failure</item>
+        <item>Lost to follow-up</item>
+        <item>Transfer out</item>
+        <item>Not evaluated</item>
+    </string-array>
+
     <string-array name="radio_buttons_medical_condition">
         <item>DM</item>
         <item>Don\'t know</item>
         <item>Asthma</item>
         <item>HTN</item>
         <item>Kidney disease</item>
+        <item>No</item>
     </string-array>
     <string-array name="radio_buttons_site_swelling">
         <item>Neck</item>
         <item>Axila</item>
         <item>Others</item>
-        <item>Kidney disease</item>
     </string-array>
     <string-array name="radio_buttons_site_disease">
         <item>Pulmonary</item>
@@ -68,18 +105,184 @@
     </string-array>
     <string-array name="radio_buttons_smoke">
         <item>Yes</item>
-        <item>Refused to answer</item>
         <item>No</item>
+        <item>Refused to answer</item>
     </string-array>
     <string-array name="radio_buttons_yesno">
         <item>Yes</item>
         <item>No</item>
     </string-array>
+
+    <string-array name="radio_buttons_yesnorefuse">
+        <item>Yes</item>
+        <item>No</item>
+        <item>Refused to answer</item>
+    </string-array>
     <string-array name="radio_buttons_3a">
         <item>Less than 2 Weeks</item>
         <item>Don\'t know</item>
-        <item>2-3 weeks</item>
+        <item>More or equal to 2 weeks</item>
         <item>Refused to answer</item>
-        <item>More than 3 weeks</item>
     </string-array>
+
+    <string-array name="radio_buttons_histopathology_result">
+        <item>Normal</item>
+        <item>Suggestive of TB</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="radio_buttons_bmi">
+        <item>Underweight (&lt;18.5) </item>
+        <item>Normal (18.5-24.9)</item>
+        <item>Overweight (25-29.9)</item>
+        <item>Obese (30-35.9)</item>
+        <item>Very Obese (&gt;40)</item>
+    </string-array>
+    <string-array name="radio_buttons_pregnancy">
+        <item>Yes </item>
+        <item>No</item>
+        <item>Planning</item>
+    </string-array>
+    <string-array name="radio_buttons_relationship">
+        <item>Mother/Father </item>
+        <item>Spouse</item>
+        <item>Grandchild</item>
+        <item>Grandparent</item>
+        <item>Aunt/Uncle</item>
+        <item>Child</item>
+        <item>Sibling</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="radio_buttons_tb_type_2">
+        <item>PTB</item>
+        <item>EPTB</item>
+    </string-array>
+    <string-array name="radio_buttons_tb_type_3">
+        <item>Bacteriologically positive (B+)</item>
+        <item>Clinically Diagnosed (CD)</item>
+    </string-array>
+    <string-array name="radio_buttons_tb_type">
+        <item>Drug Sensitive TB (DSTB)</item>
+        <item>Drug Resistant TB (DRTB)</item>
+    </string-array>
+    <string-array name="radio_buttons_diagnosis_type">
+        <item>Bacteriologically Positive</item>
+        <item>Clinically diagnosed</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_xray">
+        <item>Normal</item>
+        <item>Abnormal (TB unlikely)</item>
+        <item>Suggestive  of TB</item>
+        <item>Not Done</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_smear">
+        <item>ZN Positive</item>
+        <item>ZN Negative</item>
+        <item>Not Done</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_xpert">
+        <item>MTB Detected (Rif resistance if MTB detected) </item>
+        <item>Negative</item>
+        <item>Not Done</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_tstmt">
+        <item>Positive</item>
+        <item>Negative</item>
+        <item>Not Done</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_tstmt_result">
+        <item>Done</item>
+        <item>Not Done</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_histopathology">
+        <item>Positive</item>
+        <item>Negative</item>
+        <item>Not Done</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_ct">
+        <item>Suggestive</item>
+        <item>Normal</item>
+        <item>Not Done</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_ultra">
+        <item>Suggestive</item>
+        <item>Not Suggestive</item>
+        <item>Not Done</item>
+    </string-array>
+
+    <string-array name="radio_buttons_tb_diagnosed">
+        <item>CXR</item>
+        <item>AFB Smear</item>
+        <item>GeneXpert</item>
+        <item>TST</item>
+        <item>Clinically Diagnosed</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_regimen">
+        <item>INH</item>
+        <item>INH + Rifapentine</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_months">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_weeks">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_adherence">
+        <item>No dose missed</item>
+        <item>1 to 3 doses missed (1-3)</item>
+        <item>More than 3 doses missed</item>
+        <item>Patient stopped medication</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_doctor_notification">
+        <item>Yes</item>
+        <item>Not required</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_symptom_requirements">
+        <item>Reduction of drug dose?</item>
+        <item>Holding drug for a short duration?</item>
+        <item>No change in medication</item>
+    </string-array>
+
+    <string-array name="radio_buttons_pet_followup_end">
+        <item>Referred to another facility before enrollment</item>
+        <item>Treatment completed</item>
+        <item>Treatment failure</item>
+        <item>Moved out of area</item>
+        <item>Died</item>
+        <item>Transfer out</item>
+        <item>Other</item>
+        <item>Loss to Follow-up</item>
+    </string-array>
+    <string-array name="radio_buttons_mini_site_disease">
+        <item>Pulmonary</item>
+        <item>Extrapulmonary</item>
+    </string-array>
+
 </resources>

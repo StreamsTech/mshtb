@@ -19,10 +19,12 @@ import com.streamstech.droid.mshtb.adapter.AutoCompleteListAdapter;
 import com.streamstech.droid.mshtb.data.persistent.DatabaseManager;
 import com.streamstech.droid.mshtb.data.persistent.Patient;
 import com.streamstech.droid.mshtb.data.persistent.PatientDao;
+import com.streamstech.droid.mshtb.data.persistent.TestIndicationDao;
 import com.streamstech.droid.mshtb.data.persistent.TestResultSmear;
 import com.streamstech.droid.mshtb.data.persistent.TestResultSmearDao;
 import com.streamstech.droid.mshtb.data.persistent.TestResultXRay;
 import com.streamstech.droid.mshtb.data.persistent.TestResultXRayDao;
+import com.streamstech.droid.mshtb.util.MSHTBApplication;
 import com.streamstech.droid.mshtb.util.MyRadioGroup;
 import com.streamstech.droid.mshtb.util.UIUtil;
 import com.streamstech.droid.mshtb.util.Util;
@@ -39,6 +41,8 @@ public class SmearResultActivity extends AppCompatActivity implements DialogInte
 
     @BindView(R.id.txtSearch)
     AutoCompleteTextView txtSearch;
+    @BindView(R.id.lblReadonlyName)
+    TextView lblReadonlyName;
     @BindView(R.id.lblPatient)
     TextView lblPatient;
     @BindView(R.id.lblTime)
@@ -83,6 +87,9 @@ public class SmearResultActivity extends AppCompatActivity implements DialogInte
             }else{
                 topLayout.setVisibility(View.GONE);
                 scrollView.setVisibility(View.VISIBLE);
+                lblReadonlyName.setVisibility(View.VISIBLE);
+                lblReadonlyName.setText(patient.getName());
+                MSHTBApplication.getInstance().hideKeyboard(this);
                 findInforamation();
                 btnSave.setVisibility(View.GONE);
             }
@@ -90,8 +97,7 @@ public class SmearResultActivity extends AppCompatActivity implements DialogInte
 
         txtSearch.setThreshold(1);//will start working from first character
 
-        PatientDao patientDao = DatabaseManager.getInstance().getSession().getPatientDao();
-        List<Patient> patientList = patientDao.loadAll();
+        List<Patient> patientList = MSHTBApplication.getInstance().getPatientForResultInput(TestIndicationDao.Properties.Smear);
         AutoCompleteListAdapter adapter = new AutoCompleteListAdapter(this,
                 R.layout.autocomplete_list_row, patientList);
         txtSearch.setAdapter(adapter);
@@ -107,6 +113,7 @@ public class SmearResultActivity extends AppCompatActivity implements DialogInte
                     patient = (Patient) adapterView.getItemAtPosition(i);
                     lblPatient.setText(patient.getName() + "\n" + patient.getPatientid());
                     txtSearch.setText(patient.getName());
+                    MSHTBApplication.getInstance().hideKeyboard(SmearResultActivity.this);
                     findInforamation();
                 }
             };
@@ -134,9 +141,9 @@ public class SmearResultActivity extends AppCompatActivity implements DialogInte
         }
 
         TestResultSmearDao testResultSmearDao = DatabaseManager.getInstance().getSession().getTestResultSmearDao();
-        testResultSmearDao.save(new TestResultSmear(null, patient.getPatientid(), Util.getDateFromDatePicker(dtOrderDate),
-                radioMonth.getSelectedIndex(), Util.getDateFromDatePicker(dtResultDate), radioAFB.getSelectedIndex(),
-                new Date(), false, 0.0, 0.0));
+        testResultSmearDao.save(new TestResultSmear(null, patient.getPatientid(), Util.getDateFromDatePicker(dtOrderDate).getTime(),
+                radioMonth.getSelectedIndex(), Util.getDateFromDatePicker(dtResultDate).getTime(), radioAFB.getSelectedIndex(),
+                new Date().getTime(), false, 0.0, 0.0));
 
         UIUtil.showInfoDialog(this, SweetAlertDialog.SUCCESS_TYPE,  "Success", "AFB smear information added", this);
     }

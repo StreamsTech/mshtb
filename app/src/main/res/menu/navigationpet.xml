@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_patient_pet"
+        android:icon="@drawable/screening_icon"
+        android:title="PATIENT" />
+
+    <item
+        android:id="@+id/navigation_forms_pet"
+        android:icon="@drawable/fast_form_icon"
+        android:title="FORMS" />
+
+</menu>

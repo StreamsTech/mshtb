@@ -19,29 +19,29 @@ public class TestResultXPert {
     @NotNull
     private String patientid;
     @NotNull
-    private Date orderdate;
+    private long orderdate;
     @NotNull
     private int specimen_type;
     @NotNull
-    private Date resultdate;
+    private long resultdate;
     @NotNull
     private int genexpert_result;
     @NotNull
     private int rif_result;
 
     @NotNull
-    private Date createdtime;
+    private long createdtime;
     private boolean uploaded;
 
     @NotNull
     private double longitude;
     @NotNull
     private double latitude;
-    @Generated(hash = 1982480473)
-    public TestResultXPert(Long id, @NotNull String patientid,
-            @NotNull Date orderdate, int specimen_type, @NotNull Date resultdate,
-            int genexpert_result, int rif_result, @NotNull Date createdtime,
-            boolean uploaded, double longitude, double latitude) {
+    @Generated(hash = 2070362467)
+    public TestResultXPert(Long id, @NotNull String patientid, long orderdate,
+            int specimen_type, long resultdate, int genexpert_result,
+            int rif_result, long createdtime, boolean uploaded, double longitude,
+            double latitude) {
         this.id = id;
         this.patientid = patientid;
         this.orderdate = orderdate;
@@ -69,10 +69,10 @@ public class TestResultXPert {
     public void setPatientid(String patientid) {
         this.patientid = patientid;
     }
-    public Date getOrderdate() {
+    public long getOrderdate() {
         return this.orderdate;
     }
-    public void setOrderdate(Date orderdate) {
+    public void setOrderdate(long orderdate) {
         this.orderdate = orderdate;
     }
     public int getSpecimen_type() {
@@ -81,10 +81,10 @@ public class TestResultXPert {
     public void setSpecimen_type(int specimen_type) {
         this.specimen_type = specimen_type;
     }
-    public Date getResultdate() {
+    public long getResultdate() {
         return this.resultdate;
     }
-    public void setResultdate(Date resultdate) {
+    public void setResultdate(long resultdate) {
         this.resultdate = resultdate;
     }
     public int getGenexpert_result() {
@@ -99,10 +99,10 @@ public class TestResultXPert {
     public void setRif_result(int rif_result) {
         this.rif_result = rif_result;
     }
-    public Date getCreatedtime() {
+    public long getCreatedtime() {
         return this.createdtime;
     }
-    public void setCreatedtime(Date createdtime) {
+    public void setCreatedtime(long createdtime) {
         this.createdtime = createdtime;
     }
     public boolean getUploaded() {

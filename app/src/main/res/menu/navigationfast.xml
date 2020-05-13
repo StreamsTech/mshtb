@@ -4,11 +4,10 @@
     <item
         android:id="@+id/navigation_patient"
         android:icon="@drawable/screening_icon"
-        android:title="Screened" />
-
+        android:title="PATIENT" />
     <item
         android:id="@+id/navigation_forms"
-        android:icon="@drawable/form_icon"
-        android:title="Forms" />
+        android:icon="@drawable/fast_form_icon"
+        android:title="FORMS" />
 
 </menu>

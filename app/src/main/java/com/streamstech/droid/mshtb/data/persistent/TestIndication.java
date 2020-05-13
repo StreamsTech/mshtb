@@ -35,7 +35,7 @@ public class TestIndication {
     private String other;
 
     @NotNull
-    private Date createdtime;
+    private long createdtime;
 
     private boolean uploaded;
 
@@ -43,10 +43,10 @@ public class TestIndication {
     private double longitude;
     @NotNull
     private double latitude;
-    @Generated(hash = 424858074)
+    @Generated(hash = 1009945106)
     public TestIndication(Long id, @NotNull String patientid, int xray, int xpert,
             int smear, int ultrasound, int histopathology, int ctmri,
-            String histopathology_sample, String other, @NotNull Date createdtime,
+            String histopathology_sample, String other, long createdtime,
             boolean uploaded, double longitude, double latitude) {
         this.id = id;
         this.patientid = patientid;
@@ -126,10 +126,10 @@ public class TestIndication {
     public void setOther(String other) {
         this.other = other;
     }
-    public Date getCreatedtime() {
+    public long getCreatedtime() {
         return this.createdtime;
     }
-    public void setCreatedtime(Date createdtime) {
+    public void setCreatedtime(long createdtime) {
         this.createdtime = createdtime;
     }
     public boolean getUploaded() {

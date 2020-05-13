@@ -62,19 +62,35 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/lblReadonlyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/question_text_size"
+                android:textColor="@color/questionTextColor"
+                android:background="@color/colorAccent"
+                android:padding="5dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:text="Md. Shafiul Parvez" />
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:background="@color/colorAccent"
-                android:padding="5dp"
-                android:text="Test Order"
+                android:text="1. Test Order Date"
                 android:textColor="@color/colorWhite"
+                android:background="@color/questionBackColor"
+                android:padding="@dimen/question_text_padding"
                 android:textSize="20dp" />
 
             <DatePicker
                 android:id="@+id/dtOrderDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
                 ></DatePicker>
 
             <LinearLayout
@@ -83,10 +99,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Chest X-Ray"
+                    android:text="2. Chest X-Ray"
                     android:textColor="@color/questionTextColor"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
                     android:textSize="@dimen/question_text_size" />
 
                 <com.streamstech.droid.mshtb.util.MyRadioGroup
@@ -113,17 +131,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:background="@color/colorAccent"
-                android:padding="5dp"
-                android:text="Test Result"
+                android:text="1. Test Result Date"
                 android:textColor="@color/colorWhite"
+                android:background="@color/questionBackColor"
+                android:padding="@dimen/question_text_padding"
                 android:textSize="20dp" />
 
             <DatePicker
                 android:id="@+id/dtResultDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:datePickerMode="spinner"></DatePicker>
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                ></DatePicker>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -131,10 +151,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Radiological finding"
+                    android:text="2. Radiological finding"
                     android:textColor="@color/questionTextColor"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
                     android:textSize="@dimen/question_text_size" />
 
                 <com.streamstech.droid.mshtb.util.MyRadioGroup
@@ -163,6 +185,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Collapse" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Info not available" />
                 </com.streamstech.droid.mshtb.util.MyRadioGroup>
 
             </LinearLayout>
@@ -173,10 +200,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Radiological diagnosis"
+                    android:text="3. Radiological diagnosis"
                     android:textColor="@color/questionTextColor"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
                     android:textSize="@dimen/question_text_size" />
 
                 <com.streamstech.droid.mshtb.util.MyRadioGroup
@@ -212,10 +241,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Extent of disease"
+                    android:text="4. Extent of disease"
                     android:textColor="@color/questionTextColor"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
                     android:textSize="@dimen/question_text_size" />
 
                 <com.streamstech.droid.mshtb.util.MyRadioGroup
@@ -244,6 +275,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Abnormal but extent not define" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Info not available" />
                 </com.streamstech.droid.mshtb.util.MyRadioGroup>
 
             </LinearLayout>

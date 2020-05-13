@@ -16,7 +16,6 @@ import com.streamstech.droid.mshtb.data.persistent.DatabaseManager;
 import com.streamstech.droid.mshtb.data.persistent.Patient;
 import com.streamstech.droid.mshtb.data.persistent.PatientDao;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -24,7 +23,7 @@ public class PatientFragment extends Fragment implements SwipeRefreshLayout.OnRe
 
     private static final String ARG_COLUMN_COUNT = "column-count";
     private int mColumnCount = 1;
-    private FormsFragment.OnListFragmentInteractionListener mListener;
+    private FASTFormsFragment.OnListFragmentInteractionListener mListener;
     private PatientRecyclerViewAdapter assetRecyclerViewAdapter;
     SwipeRefreshLayout mSwipeRefreshLayout;
 
@@ -95,6 +94,12 @@ public class PatientFragment extends Fragment implements SwipeRefreshLayout.OnRe
         updatePatient();
     }
 
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        getFragmentManager().beginTransaction().detach(this).attach(this).commit();
+//    }
+
     public void updatePatient(){
         if (!isVisible()){
             return;
@@ -113,8 +118,8 @@ public class PatientFragment extends Fragment implements SwipeRefreshLayout.OnRe
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof FormsFragment.OnListFragmentInteractionListener) {
-            mListener = (FormsFragment.OnListFragmentInteractionListener) context;
+        if (context instanceof FASTFormsFragment.OnListFragmentInteractionListener) {
+            mListener = (FASTFormsFragment.OnListFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnListFragmentInteractionListener");

@@ -23,7 +23,7 @@ public class DatabaseManager {
 
     public void init(Context context) {
         this.context = context;
-        this.db = new DaoMaster.DevOpenHelper(context, this.DB_NAME, null).getWritableDatabase();
+        this.db = new UpgradeHelper(context, this.DB_NAME, null).getWritableDatabase();
         this.daoMaster = new DaoMaster(this.db);
     }
 
@@ -48,7 +48,7 @@ public class DatabaseManager {
             context = MSHTBApplication.getInstance();
         }
         if (this.daoMaster == null) {
-            this.db = new DaoMaster.DevOpenHelper(this.context, this.DB_NAME, null).getWritableDatabase();
+            this.db = new UpgradeHelper(this.context, this.DB_NAME, null).getWritableDatabase();
             this.daoMaster = new DaoMaster(this.db);
         }
         return this.daoMaster.newSession();

@@ -28,6 +28,14 @@ public class SplashActivity extends Activity {
         } catch (NameNotFoundException e) {
             e.printStackTrace();
         }
+
+        try {
+            this.version = getPackageManager().getPackageInfo(getApplicationInfo().packageName, 0).versionName;
+            ((TextView) findViewById(R.id.version_txt)).setText(" v" + this.version);
+        } catch (NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
         DatabaseManager.getInstance().init(this);
         startSplashTimer();
     }
@@ -47,7 +55,7 @@ public class SplashActivity extends Activity {
     }
 
     private void startLandingActivity() {
-        startActivity(new Intent(this, Verification.class));
+        startActivity(new Intent(this, LoginActivity.class));
         finish();
     }
 

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?><!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:layout_margin="@dimen/activity_vertical_margin"--><!--tools:context="com.streamstech.droid.mshtb.activity.BaseSearchActivity">-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/baseSearchLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <AutoCompleteTextView
+            android:id="@+id/txtSearch"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight=".75"
+            android:hint="Search a patient or scan a QR"
+            android:textSize="15dp" />
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <ImageView
+            android:id="@+id/imgClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:src="@drawable/clear" />
+
+        <ImageView
+            android:id="@+id/imgQR"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".15"
+            android:src="@drawable/qr" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="@color/colorAccent"
+            >
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/lblIndexPatientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/tree"
+                android:textSize="@dimen/question_text_size"
+                android:text="--"
+                android:textColor="@color/colorWhite"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/lblIndexPatientCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textSize="8dp"
+                android:textColor="@color/colorWhite"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="@color/gray_btn_bg_color"
+            >
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/lblEnrollMemberName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:gravity="right"
+                android:textSize="@dimen/question_text_size"
+                android:textColor="@color/colorAccent"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/lblEnrollMemberCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:gravity="right"
+                android:textSize="8dp"
+                android:textColor="@color/colorAccent"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"></LinearLayout>
+</LinearLayout><!--</RelativeLayout>-->

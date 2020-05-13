@@ -5,5 +5,5 @@ package com.streamstech.droid.mshtb.data;
  */
 
 public enum State {
-    UNDEFINED, REGISTERED, VERIFIED
+    LOGGED_OUT, VERIFIED
 }

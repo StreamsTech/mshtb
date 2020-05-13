@@ -19,26 +19,25 @@ public class TestResultSmear {
     @NotNull
     private String patientid;
     @NotNull
-    private Date orderdate;
+    private long orderdate;
     @NotNull
     private int monthof_treatment;
     @NotNull
-    private Date resultdate;
+    private long resultdate;
     @NotNull
     private int result;
 
     @NotNull
-    private Date createdtime;
+    private long createdtime;
     private boolean uploaded;
 
     @NotNull
     private double longitude;
     @NotNull
     private double latitude;
-    @Generated(hash = 1716173451)
-    public TestResultSmear(Long id, @NotNull String patientid,
-            @NotNull Date orderdate, int monthof_treatment,
-            @NotNull Date resultdate, int result, @NotNull Date createdtime,
+    @Generated(hash = 2140697787)
+    public TestResultSmear(Long id, @NotNull String patientid, long orderdate,
+            int monthof_treatment, long resultdate, int result, long createdtime,
             boolean uploaded, double longitude, double latitude) {
         this.id = id;
         this.patientid = patientid;
@@ -66,10 +65,10 @@ public class TestResultSmear {
     public void setPatientid(String patientid) {
         this.patientid = patientid;
     }
-    public Date getOrderdate() {
+    public long getOrderdate() {
         return this.orderdate;
     }
-    public void setOrderdate(Date orderdate) {
+    public void setOrderdate(long orderdate) {
         this.orderdate = orderdate;
     }
     public int getMonthof_treatment() {
@@ -78,10 +77,10 @@ public class TestResultSmear {
     public void setMonthof_treatment(int monthof_treatment) {
         this.monthof_treatment = monthof_treatment;
     }
-    public Date getResultdate() {
+    public long getResultdate() {
         return this.resultdate;
     }
-    public void setResultdate(Date resultdate) {
+    public void setResultdate(long resultdate) {
         this.resultdate = resultdate;
     }
     public int getResult() {
@@ -90,10 +89,10 @@ public class TestResultSmear {
     public void setResult(int result) {
         this.result = result;
     }
-    public Date getCreatedtime() {
+    public long getCreatedtime() {
         return this.createdtime;
     }
-    public void setCreatedtime(Date createdtime) {
+    public void setCreatedtime(long createdtime) {
         this.createdtime = createdtime;
     }
     public boolean getUploaded() {

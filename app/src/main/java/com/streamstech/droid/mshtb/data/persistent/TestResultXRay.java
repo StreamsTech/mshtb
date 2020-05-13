@@ -19,11 +19,11 @@ public class TestResultXRay {
     @NotNull
     private String patientid;
     @NotNull
-    private Date orderdate;
+    private long orderdate;
     @NotNull
     private int chesrxray;
     @NotNull
-    private Date resultdate;
+    private long resultdate;
     @NotNull
     private int radiologica_finding;
     @NotNull
@@ -32,7 +32,7 @@ public class TestResultXRay {
     private int extent_disease;
 
     @NotNull
-    private Date createdtime;
+    private long createdtime;
 
     private boolean uploaded;
 
@@ -40,12 +40,11 @@ public class TestResultXRay {
     private double longitude;
     @NotNull
     private double latitude;
-    @Generated(hash = 194714808)
-    public TestResultXRay(Long id, @NotNull String patientid,
-            @NotNull Date orderdate, int chesrxray, @NotNull Date resultdate,
-            int radiologica_finding, int radiologica_diagnosis, int extent_disease,
-            @NotNull Date createdtime, boolean uploaded, double longitude,
-            double latitude) {
+    @Generated(hash = 1110392599)
+    public TestResultXRay(Long id, @NotNull String patientid, long orderdate,
+            int chesrxray, long resultdate, int radiologica_finding,
+            int radiologica_diagnosis, int extent_disease, long createdtime,
+            boolean uploaded, double longitude, double latitude) {
         this.id = id;
         this.patientid = patientid;
         this.orderdate = orderdate;
@@ -74,10 +73,10 @@ public class TestResultXRay {
     public void setPatientid(String patientid) {
         this.patientid = patientid;
     }
-    public Date getOrderdate() {
+    public long getOrderdate() {
         return this.orderdate;
     }
-    public void setOrderdate(Date orderdate) {
+    public void setOrderdate(long orderdate) {
         this.orderdate = orderdate;
     }
     public int getChesrxray() {
@@ -86,10 +85,10 @@ public class TestResultXRay {
     public void setChesrxray(int chesrxray) {
         this.chesrxray = chesrxray;
     }
-    public Date getResultdate() {
+    public long getResultdate() {
         return this.resultdate;
     }
-    public void setResultdate(Date resultdate) {
+    public void setResultdate(long resultdate) {
         this.resultdate = resultdate;
     }
     public int getRadiologica_finding() {
@@ -110,10 +109,10 @@ public class TestResultXRay {
     public void setExtent_disease(int extent_disease) {
         this.extent_disease = extent_disease;
     }
-    public Date getCreatedtime() {
+    public long getCreatedtime() {
         return this.createdtime;
     }
-    public void setCreatedtime(Date createdtime) {
+    public void setCreatedtime(long createdtime) {
         this.createdtime = createdtime;
     }
     public boolean getUploaded() {
@@ -134,5 +133,4 @@ public class TestResultXRay {
     public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
-
 }

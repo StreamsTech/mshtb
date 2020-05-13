@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:multi_line_radio_group="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -62,12 +63,26 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/lblReadonlyName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@color/colorAccent"
+                android:gravity="center"
                 android:padding="5dp"
-                android:text="Test Order"
+                android:text="Md. Shafiul Parvez"
+                android:textColor="@color/questionTextColor"
+                android:textSize="@dimen/question_text_size"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/questionBackColor"
+                android:padding="@dimen/question_text_padding"
+                android:text="1. Test Order Date"
                 android:textColor="@color/colorWhite"
                 android:textSize="20dp" />
 
@@ -75,6 +90,7 @@
                 android:id="@+id/dtOrderDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:calendarViewShown="false"
                 android:datePickerMode="spinner"></DatePicker>
 
             <LinearLayout
@@ -83,29 +99,38 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Histopathology"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="2. Histopathology"
                     android:textColor="@color/questionTextColor"
                     android:textSize="@dimen/question_text_size" />
 
-                <com.streamstech.droid.mshtb.util.MyRadioGroup
+                <!--<com.streamstech.droid.mshtb.util.MyRadioGroup-->
+                <!--android:id="@+id/radioHistopathology"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="left"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/yes" />-->
+
+                <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/no" />-->
+                <!--</com.streamstech.droid.mshtb.util.MyRadioGroup>-->
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
                     android:id="@+id/radioHistopathology"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:orientation="vertical">
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/yes" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/no" />
-                </com.streamstech.droid.mshtb.util.MyRadioGroup>
+                    multi_line_radio_group:default_button="No"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />
 
             </LinearLayout>
 
@@ -120,9 +145,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:background="@color/colorAccent"
-                android:padding="5dp"
-                android:text="Test Result"
+                android:background="@color/questionBackColor"
+                android:padding="@dimen/question_text_padding"
+                android:text="1. Test Result"
                 android:textColor="@color/colorWhite"
                 android:textSize="20dp" />
 
@@ -130,6 +155,7 @@
                 android:id="@+id/dtResultDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:calendarViewShown="false"
                 android:datePickerMode="spinner"></DatePicker>
 
             <LinearLayout
@@ -138,35 +164,21 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Gene Xpert"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="2. Histopathology Result"
                     android:textColor="@color/questionTextColor"
                     android:textSize="@dimen/question_text_size" />
 
-                <com.streamstech.droid.mshtb.util.MyRadioGroup
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
                     android:id="@+id/radioHistopathologyResult"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:orientation="vertical">
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_histopathology_result" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Normal" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Suggestive of TB" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Others" />
-
-                </com.streamstech.droid.mshtb.util.MyRadioGroup>
             </LinearLayout>
         </LinearLayout>
 

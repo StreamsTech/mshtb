@@ -1,25 +1,22 @@
 package com.streamstech.droid.mshtb.adapter;
 
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.streamstech.droid.mshtb.R;
 import com.streamstech.droid.mshtb.data.persistent.Patient;
-import com.streamstech.droid.mshtb.fragement.FormsFragment;
+import com.streamstech.droid.mshtb.fragement.FASTFormsFragment;
 import java.util.List;
 
 
 public class PatientRecyclerViewAdapter extends RecyclerView.Adapter<PatientRecyclerViewAdapter.ViewHolder> {
 
     private List<Patient> mValues;
-    private final FormsFragment.OnListFragmentInteractionListener mListener;
+    private final FASTFormsFragment.OnListFragmentInteractionListener mListener;
 
-    public PatientRecyclerViewAdapter(List<Patient> items, FormsFragment.OnListFragmentInteractionListener listener) {
+    public PatientRecyclerViewAdapter(List<Patient> items, FASTFormsFragment.OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }

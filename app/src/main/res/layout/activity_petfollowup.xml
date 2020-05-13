@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:multi_line_radio_group="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.streamstech.droid.mshtb.activity.PETFollowupActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSave"
+        android:layout_below="@+id/topLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/lblTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:text="2018-08-09 04:45PM"
+                android:textColor="@color/colorWhite"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="1. Month of treatment"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    multi_line_radio_group:default_button="3"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_pet_months" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="2. TB symptoms?"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    multi_line_radio_group:default_button="No"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="2a. Symptoms"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/chk1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cough"
+                    android:tag="0"/>
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/chk2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fever"
+                    android:tag="1"/>
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/chk3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Night sweats"
+                    android:tag="3"/>
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/chk4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loss of appetite"
+                    android:tag="4"/>
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/chk5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Weight loss"
+                    android:tag="5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="3. Describe symptoms"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtSymptom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Symptoms description"
+                        android:inputType="text"
+                        android:maxLines="20" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/questionBackColor"
+                android:padding="@dimen/question_text_padding"
+                android:text="4. Possible medication side-effects"
+                android:textColor="@color/questionTextColor"
+                android:textSize="@dimen/question_text_size" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chk6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dizzy"
+                android:tag="0"/>
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chk7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Headache"
+                android:tag="1"/>
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chk8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nausea/Vomiting"
+                android:tag="3"/>
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chk9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Abdominal pain"
+                android:tag="4"/>
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chk10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No appetite"
+                android:tag="5"/>
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chk11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jaundice"
+                android:tag="6"/>
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chk12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rash"
+                android:tag="7"/>
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chk13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Muscle pain"
+                android:tag="8"/>
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chk14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eye problems"
+                android:tag="9"/>
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/chk15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                android:tag="10"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Other side effects"
+                    android:inputType="text"
+                    android:maxLines="20" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/questionBackColor"
+                    android:padding="@dimen/question_text_padding"
+                    android:text="5. Are complaints consistent with drug side-effects?"
+                    android:textColor="@color/questionTextColor"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                    android:id="@+id/radioGroup3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    multi_line_radio_group:default_button="No"
+                    multi_line_radio_group:max_in_row="1"
+                    multi_line_radio_group:radio_buttons="@array/radio_buttons_yesno" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/questionBackColor"
+                android:padding="@dimen/question_text_padding"
+                android:text="6. Adherence"
+                android:textColor="@color/questionTextColor"
+                android:textSize="@dimen/question_text_size" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtAdherence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Number of missed dose this month"
+                    android:inputType="number"
+                    android:text="0"
+                    android:maxLength="1"
+                     />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Save" />
+</RelativeLayout>

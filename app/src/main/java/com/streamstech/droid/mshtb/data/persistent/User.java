@@ -101,5 +101,4 @@ public class User {
     public void setLocationname(String locationname) {
         this.locationname = locationname;
     }
-
 }

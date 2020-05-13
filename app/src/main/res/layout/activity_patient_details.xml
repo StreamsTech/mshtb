@@ -25,7 +25,7 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="20dp"
+        android:paddingTop="10dp"
         android:visibility="visible"
         android:layout_below="@id/topLayout">
 
@@ -35,20 +35,233 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="Name"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/question_text_size"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/lblName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="n/a"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="Patient ID"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/question_text_size" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/lblID"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="n/a"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="Age"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/question_text_size" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/lblAge"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="-"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="Gender"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/question_text_size" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/lblGender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="-"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="Contact No"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/question_text_size" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/lblContactNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="-"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnDoctorsDecision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Doctor's Decision"
+                />
+
             <android.support.v7.widget.AppCompatCheckedTextView
                 android:id="@+id/checkedTextTB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:textSize="@dimen/question_text_size"
-                android:textColor="@color/questionTextColor"
+                android:textColor="@color/colorAccent"
                 android:text="TB" />
+
+            <LinearLayout
+                android:id="@+id/tbAttribute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sensitivity of TB? "
+                    android:textColor="@color/colorAccent"
+                    android:padding="@dimen/question_text_padding"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.streamstech.droid.mshtb.util.MyRadioGroup
+                    android:id="@+id/radioSensivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:saveEnabled="false"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Drug Sensitive (DS)" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Drug Resistant (DR)"/>
+                </com.streamstech.droid.mshtb.util.MyRadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Site of disease "
+                    android:textColor="@color/colorAccent"
+                    android:padding="@dimen/question_text_padding"
+                    android:textSize="@dimen/question_text_size" />
+
+                <com.streamstech.droid.mshtb.util.MyRadioGroup
+                    android:id="@+id/radioSiteofDisease"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:saveEnabled="false"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pulmonary" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Extra pulmonary"/>
+                </com.streamstech.droid.mshtb.util.MyRadioGroup>
+
+
+            </LinearLayout>
 
             <android.support.v7.widget.AppCompatCheckedTextView
                 android:id="@+id/checkedTextPTB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/question_text_size"
-                android:textColor="@color/questionTextColor"
+                android:textColor="@color/colorAccent"
                 android:layout_marginTop="10dp"
                 android:text="Presumptive TB" />
 
@@ -57,7 +270,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/question_text_size"
-                android:textColor="@color/questionTextColor"
+                android:textColor="@color/colorAccent"
                 android:layout_marginTop="10dp"
                 android:text="Screening form" />
 
@@ -66,7 +279,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/question_text_size"
-                android:textColor="@color/questionTextColor"
+                android:textColor="@color/colorAccent"
                 android:visibility="gone"
                 android:layout_marginTop="10dp"
                 android:text="Test indication form" />
@@ -76,7 +289,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/question_text_size"
-                android:textColor="@color/questionTextColor"
+                android:textColor="@color/colorAccent"
                 android:visibility="gone"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
@@ -87,7 +300,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/question_text_size"
-                android:textColor="@color/questionTextColor"
+                android:textColor="@color/colorAccent"
                 android:visibility="gone"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
@@ -98,7 +311,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/question_text_size"
-                android:textColor="@color/questionTextColor"
+                android:textColor="@color/colorAccent"
                 android:visibility="gone"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
@@ -109,11 +322,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/question_text_size"
-                android:textColor="@color/questionTextColor"
+                android:textColor="@color/colorAccent"
                 android:visibility="gone"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:text="Histopathology" />
+
+            <android.support.v7.widget.AppCompatCheckedTextView
+                android:id="@+id/checkedTextTreatmentInitiation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/question_text_size"
+                android:textColor="@color/colorAccent"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:text="Treatment initiated" />
+
+            <android.support.v7.widget.AppCompatCheckedTextView
+                android:id="@+id/checkedTextTreatmentOutcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/question_text_size"
+                android:textColor="@color/colorAccent"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:text="Treatment outcome" />
 
         </LinearLayout>
     </ScrollView>

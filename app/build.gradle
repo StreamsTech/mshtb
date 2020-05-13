@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao' // apply plugin
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 26
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.streamstech.droid.mshtb"
-        minSdkVersion 14
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 11
+        versionName "2.7"
         multiDexEnabled true
     }
     buildTypes {
@@ -20,6 +20,10 @@ android {
     }
     productFlavors {
     }
+}
+
+greendao {
+    schemaVersion 8
 }
 
 dependencies {
@@ -37,8 +41,10 @@ dependencies {
     compile 'org.greenrobot:greendao:3.2.2'
     compile 'com.loopj.android:android-async-http:1.4.9'
     compile 'com.google.android.gms:play-services:8.4.0'
-    compile 'cn.pedant.sweetalert:library:1.3'
+//    compile 'cn.pedant.sweetalert:library:1.3'
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile 'com.github.Gavras:MultiLineRadioGroup:v1.0.0.6'
+    compile 'com.xeoh.android:checkboxgroup:1.0.1'
 }

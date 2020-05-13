@@ -53,19 +53,18 @@ public class Screening {
     @NotNull
     private int q13;
     @NotNull
-    private Date createdtime;
+    private long createdtime;
     @NotNull
     private boolean uploaded;
     @NotNull
     private double longitude;
     @NotNull
     private double latitude;
-    @Generated(hash = 844041961)
+    @Generated(hash = 1675789284)
     public Screening(Long id, @NotNull String patientid, int q3, int q3a, int q3b,
             int q4, int q5, int q6, int q7, int q7a, int q8, int q8a, int q9,
             int q9a, String q9aothers, int q10, int q11, int q12, int q13,
-            @NotNull Date createdtime, boolean uploaded, double longitude,
-            double latitude) {
+            long createdtime, boolean uploaded, double longitude, double latitude) {
         this.id = id;
         this.patientid = patientid;
         this.q3 = q3;
@@ -207,10 +206,10 @@ public class Screening {
     public void setQ13(int q13) {
         this.q13 = q13;
     }
-    public Date getCreatedtime() {
+    public long getCreatedtime() {
         return this.createdtime;
     }
-    public void setCreatedtime(Date createdtime) {
+    public void setCreatedtime(long createdtime) {
         this.createdtime = createdtime;
     }
     public boolean getUploaded() {
